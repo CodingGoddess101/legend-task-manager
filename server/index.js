@@ -11,16 +11,14 @@ app.use(express.static(
     path.join(__dirname, '../client/dist/'))
 )
 
-app.get('/', (req, res) => {
-    res.status(200)
-})
-
-app.get('/login', (req, res) => {
-    res.status(200)
-})
 app.post('/login', (req, res) => {
-    res.status(200)
+    //if pass in auth with cookie, redirect else stay on login page
+
+    res.redirect(301, '/dashboard/tasks/');
 })
+// app.get('/dashboard/tasks/', (req, res) => {
+//     res.status(200)
+// })
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
