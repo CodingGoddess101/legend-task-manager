@@ -1,1 +1,578 @@
-/*# sourceMappingURL=App.css.map */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background-color: #ffffff;
+  color: blue;
+  font-family: calibri, Arial, Helvetica, sans-serif;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 1px;
+}
+
+.header {
+  width: 100%;
+  margin: 0px auto;
+  color: #ffffff;
+  background-color: #000066;
+  height: 40px;
+}
+.header .heading-two {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px;
+  padding: 0px 30px;
+  width: 50px;
+  height: 40px;
+}
+
+.home {
+  margin: 40px auto;
+}
+.home .container {
+  display: block;
+  margin: 0px auto;
+  background-color: #000066;
+  border-radius: 10px;
+}
+.home .container .heading-one {
+  text-align: center;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 30px 0px;
+}
+.home .container:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000066;
+  padding: 30px 0px;
+  margin: 10px auto 0px;
+  border-radius: 10px;
+}
+.home .container:nth-child(2) .box.one {
+  margin: 0px auto;
+}
+.home .container:nth-child(2) .box.one .sub.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+  font-size: 14px;
+}
+.home .container:nth-child(2) .box.one .sub.container .p.wrapper .paragraph {
+  word-break: break-all;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+.home .container:nth-child(2) .box.one .sub.container .p.wrapper .button {
+  background-color: #000066;
+  border: 2px solid #0044AA;
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.home .container:nth-child(2) .box.one .sub.container .p.wrapper .button a {
+  color: #fff;
+  text-decoration: none;
+}
+.home .container:nth-child(2) .box.two {
+  margin: 0px auto;
+  text-align: start;
+}
+.home .container:nth-child(2) .box.two > .paragraph {
+  margin: 0px auto;
+  color: #ffffff;
+}
+
+.login,
+.register {
+  height: auto;
+  background-color: #000066;
+  margin: 0px auto;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px #0044aa;
+}
+.login .wrapper,
+.register .wrapper {
+  display: block;
+  margin: 50px auto;
+  padding: 2px 0px;
+  width: 250px;
+}
+.login .wrapper .heading.container,
+.register .wrapper .heading.container {
+  width: 250px;
+  margin: 0px auto;
+}
+.login .wrapper .heading.container .heading-one,
+.register .wrapper .heading.container .heading-one {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.login .wrapper .heading.container .paragraph,
+.register .wrapper .heading.container .paragraph {
+  margin-top: 2px;
+  margin-bottom: 15px;
+  padding: 0px;
+  font-size: 12px;
+}
+.login .wrapper #form,
+.register .wrapper #form {
+  margin: 0px auto;
+  width: 250px;
+}
+.login .wrapper #form .form-field-row,
+.register .wrapper #form .form-field-row {
+  display: block;
+  margin: 0px auto;
+  height: 20px;
+}
+.login .wrapper #form .form-field-row .username,
+.login .wrapper #form .form-field-row .email,
+.login .wrapper #form .form-field-row .password,
+.register .wrapper #form .form-field-row .username,
+.register .wrapper #form .form-field-row .email,
+.register .wrapper #form .form-field-row .password {
+  height: inherit;
+  display: block;
+  width: 100px;
+  height: 20px;
+}
+.login .wrapper #form .form-field-row .username::after,
+.login .wrapper #form .form-field-row .email::after,
+.login .wrapper #form .form-field-row .password::after,
+.register .wrapper #form .form-field-row .username::after,
+.register .wrapper #form .form-field-row .email::after,
+.register .wrapper #form .form-field-row .password::after {
+  content: ":";
+}
+.login .wrapper #form .form-field-row .username-input,
+.login .wrapper #form .form-field-row .email-input,
+.login .wrapper #form .form-field-row .password-input,
+.register .wrapper #form .form-field-row .username-input,
+.register .wrapper #form .form-field-row .email-input,
+.register .wrapper #form .form-field-row .password-input {
+  background-color: #000066;
+  border: 1px solid #0044AA;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 230px;
+  padding: 2px 5px;
+}
+.login .wrapper #form .form-field-row .username-input::-moz-placeholder, .login .wrapper #form .form-field-row .email-input::-moz-placeholder, .login .wrapper #form .form-field-row .password-input::-moz-placeholder, .register .wrapper #form .form-field-row .username-input::-moz-placeholder, .register .wrapper #form .form-field-row .email-input::-moz-placeholder, .register .wrapper #form .form-field-row .password-input::-moz-placeholder {
+  color: #ffffff;
+}
+.login .wrapper #form .form-field-row .username-input::placeholder,
+.login .wrapper #form .form-field-row .email-input::placeholder,
+.login .wrapper #form .form-field-row .password-input::placeholder,
+.register .wrapper #form .form-field-row .username-input::placeholder,
+.register .wrapper #form .form-field-row .email-input::placeholder,
+.register .wrapper #form .form-field-row .password-input::placeholder {
+  color: #ffffff;
+}
+.login .wrapper #form .form-field-row .submit-btn,
+.register .wrapper #form .form-field-row .submit-btn {
+  display: block;
+  margin: 0px auto;
+  border-radius: 10px;
+  width: 230px;
+  color: #ffffff;
+  border: 1px solid #0044AA;
+  background-color: #000066;
+}
+.login .wrapper #form .form-field-row:nth-child(3),
+.register .wrapper #form .form-field-row:nth-child(3) {
+  margin-top: 10px;
+}
+.login .wrapper #form .form-field-row:nth-child(4),
+.register .wrapper #form .form-field-row:nth-child(4) {
+  margin-bottom: 20px;
+  height: 30px;
+}
+.login .wrapper #form .form-field-row:nth-child(5),
+.login .wrapper #form .form-field-row:nth-child(6),
+.register .wrapper #form .form-field-row:nth-child(5),
+.register .wrapper #form .form-field-row:nth-child(6) {
+  height: 30px;
+}
+.login .wrapper #form .form-field-row:nth-child(7),
+.register .wrapper #form .form-field-row:nth-child(7) {
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.login .wrapper #form .form-field-row:nth-child(7) a,
+.register .wrapper #form .form-field-row:nth-child(7) a {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.notfound {
+  width: 350px;
+  margin: 20px auto 0px;
+}
+.notfound .wrapper {
+  display: flex;
+  align-items: center;
+}
+.notfound .wrapper .heading-one {
+  color: #000066;
+}
+.notfound .wrapper .notfound-route {
+  margin-left: 10px;
+  color: darkgreen;
+  font-weight: 600;
+}
+
+.footer {
+  margin: 0px auto;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  background-color: #000066;
+  color: #ffffff;
+}
+.footer .paragraph {
+  padding: 10px 0px;
+  display: block;
+  margin: 0px auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media screen and (min-width: 300px) and (max-width: 424px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 250px;
+  }
+  .home .container .heading-one {
+    width: 200px;
+  }
+  .home .container:nth-child(2) {
+    width: 250px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 250px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 250px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 200px;
+  }
+  .login,
+  .register {
+    width: 250px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 230px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 230px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 230px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 200px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 560px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 400px;
+  }
+  .home .container .heading-one {
+    width: 350px;
+  }
+  .home .container:nth-child(2) {
+    width: 400px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 270px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 270px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 270px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 270px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 270px;
+  }
+  .login,
+  .register {
+    width: 350px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 250px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 250px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 250px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 230px;
+  }
+  .footer {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 561px) and (max-width: 767px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 500px;
+  }
+  .home .container .heading-one {
+    width: 450px;
+  }
+  .home .container:nth-child(2) {
+    width: 500px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 200px;
+  }
+  .login,
+  .register {
+    width: 350px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 250px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 250px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 250px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 500px;
+  }
+  .home .container .heading-one {
+    width: 450px;
+  }
+  .home .container:nth-child(2) {
+    width: 500px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 200px;
+  }
+  .login,
+  .register {
+    width: 350px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 250px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 250px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 250px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 500px;
+  }
+  .home .container .heading-one {
+    width: 450px;
+  }
+  .home .container:nth-child(2) {
+    width: 500px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 200px;
+  }
+  .login,
+  .register {
+    width: 350px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 250px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 250px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 250px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 230px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .home {
+    margin-bottom: 80px;
+  }
+  .home .container {
+    width: 500px;
+  }
+  .home .container .heading-one {
+    width: 450px;
+  }
+  .home .container:nth-child(2) {
+    width: 500px;
+  }
+  .home .container:nth-child(2) .box.one {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.one .sub.container .p.wrapper {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two {
+    width: 200px;
+  }
+  .home .container:nth-child(2) .box.two > .paragraph {
+    width: 200px;
+  }
+  .login,
+  .register {
+    width: 350px;
+  }
+  .login .wrapper,
+  .register .wrapper {
+    width: 250px;
+  }
+  .login .wrapper .heading.container,
+  .register .wrapper .heading.container {
+    width: 250px;
+  }
+  .login .wrapper #form,
+  .register .wrapper #form {
+    width: 250px;
+  }
+  .login .wrapper #form .form-field-row .username-input,
+  .login .wrapper #form .form-field-row .email-input,
+  .login .wrapper #form .form-field-row .password-input,
+  .register .wrapper #form .form-field-row .username-input,
+  .register .wrapper #form .form-field-row .email-input,
+  .register .wrapper #form .form-field-row .password-input {
+    width: 230px;
+  }
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,707 @@
+$_0 :0px;
+$_1 :1px;
+$_2 :2px;
+$_3 :3px;
+$_5 :5px;
+$_8 :8px;
+$_10 :10px;
+$_15 :15px;
+$_20 :20px;
+$_30 :30px;
+$_40 :40px;
+$_50 :50px;
+$_60 :60px;
+$_70 :70px;
+$_80 :80px;
+$_100 :100px;
+$_120 :120px;
+$_150 :150px;
+$_180 :180px;
+$_200 :200px;
+$_230 :230px;
+$_250 :250px;
+$_270 :270px;
+$_300 :300px;
+$_350 :350px;
+$_400 :400px;
+$_450 :450px;
+$_500 :500px;
+$fit_content: fit-content;
+$auto: auto;
+$wrap: wrap;
+$block: block;
+$flex: flex;
+$alignCenter: center;
+$solid: solid;
+
+* {
+    transition: all .2s ease-in-out;
+
+}
+
+body {
+    background-color: #ffffff;
+    color: blue;
+    font-family: calibri, Arial, Helvetica, sans-serif;
+    display: block;
+    margin: $_0;
+    padding: $_0;
+    letter-spacing: $_1;
+}
+
+.header {
+    width: 100%;
+    margin: $_0 $auto;
+    color: #ffffff;
+    background-color: #000066;
+    height: $_40;
+
+    .heading-two {
+        display: $flex;
+        flex-wrap: $wrap;
+        align-items: $alignCenter;
+        margin: $_0;
+        padding: $_0 $_30;
+        width: $_50;
+        height: $_40;
+    }
+}
+
+.home {
+    margin: $_40 $auto ;
+
+    .container {
+        display: $block;
+        // width: $_450;
+        margin: $_0 $auto;
+        background-color: #000066;
+        border-radius: $_10;
+
+        .heading-one {
+            text-align: center;
+            margin: $_0 $auto;
+            color: #ffffff;
+            font-size: $_20;
+            padding: $_30 $_0;
+            // width: $_400;
+        }
+    }
+
+    .container:nth-child(2) {
+        display: $flex;
+        flex-wrap: $wrap;
+        background-color: #000066;
+        // width: $_450;
+        padding: $_30 $_0;
+        margin: $_10 $auto $_0;
+        border-radius: $_10;
+
+        .box.one {
+            // width: $_400;
+            margin: $_0 $auto;
+
+            .sub.container {
+                display: $flex;
+                flex-wrap: $wrap;
+                margin: $_0 $auto;
+                color: #ffffff;
+                font-size: $_20;
+                border-radius: $_10;
+                // width: $_400;
+
+                .p.wrapper {
+                    // width: $_200;
+                    font-size: 14px;
+
+                    .paragraph {
+                        word-break: break-all;
+                        hyphens: auto;
+                    }
+
+                    .button {
+                        background-color: #000066;
+                        border: $_2 $solid #0044AA;
+                        font-size: 12px;
+                        padding: $_3;
+                        border-radius: $_5;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .box.two {
+            margin: $_0 $auto;
+            text-align: start;
+
+            >.paragraph {
+                margin: $_0 $auto;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.login,
+.register {
+    // width: $_300;
+    height: auto;
+    background-color: #000066;
+    margin: $_0 $auto;
+    color: #ffffff;
+    border-radius: $_10;
+    box-shadow: $_0 $_0 $_10 $_5#0044aa;
+
+    .wrapper {
+        display: $block;
+        margin: $_50 $auto;
+        padding: $_2 $_0;
+        width: $_250;
+
+        .heading.container {
+            width: $_250;
+            margin: $_0 $auto;
+
+            .heading-one {
+                //font-size to be changed if there is enough time
+                font-size: 20px;
+                margin-bottom: $_0;
+            }
+
+            .paragraph {
+                margin-top: $_2;
+                margin-bottom: $_15;
+                padding: 0px;
+                //font-size to be changed if there is enough time
+                font-size: 12px;
+            }
+        }
+
+        #form {
+            margin: $_0 $auto;
+            width: $_250;
+
+            .form-field-row {
+                display: block;
+                margin: $_0 $auto;
+                height: $_20;
+
+                // label elements
+                .username,
+                .email,
+                .password {
+                    height: inherit;
+                    display: $block;
+                    width: $_100;
+                    height: $_20;
+                }
+
+                //insert : icon after text
+                .username::after,
+                .email::after,
+                .password::after {
+                    content: ":";
+                }
+
+                .username-input,
+                .email-input,
+                .password-input {
+                    background-color: #000066;
+                    border: $_1 solid #0044AA;
+                    color: #ffffff;
+                    border-radius: $_10;
+                    width: $_230;
+                    padding: $_2 $_5;
+                }
+
+                .username-input::placeholder,
+                .email-input::placeholder,
+                .password-input::placeholder {
+                    color: #ffffff;
+
+                }
+
+                .submit-btn {
+                    display: block;
+                    margin: $_0 $auto;
+                    border-radius: $_10;
+                    width: 230px;
+                    color: #ffffff;
+                    border: $_1 solid #0044AA;
+                    background-color: #000066;
+                }
+            }
+
+            .form-field-row:nth-child(3) {
+                margin-top: $_10;
+
+            }
+
+            .form-field-row:nth-child(4) {
+                margin-bottom: $_20;
+                height: $_30;
+            }
+
+            .form-field-row:nth-child(5),
+            .form-field-row:nth-child(6) {
+                height: $_30;
+            }
+
+            .form-field-row:nth-child(7) {
+                display: flex;
+                margin: $_0 $auto;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+
+                a {
+                    color: #ffffff;
+                    padding-left: $_5;
+                }
+            }
+        }
+    }
+}
+
+.notfound {
+    width: $_350;
+    margin: $_20 $auto $_0;
+
+    .wrapper {
+        display: $flex;
+        align-items: $alignCenter;
+
+        .heading-one {
+            color: #000066;
+        }
+
+        .notfound-route {
+            margin-left: $_10;
+            color: darkgreen;
+            font-weight: 600;
+        }
+    }
+}
+
+.footer {
+    margin: $_0 $auto;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: $_0;
+    background-color: #000066;
+    color: #ffffff;
+
+    .paragraph {
+        padding: $_10 $_0;
+        display: $block;
+        margin: $_0 $auto;
+        width: $fit_content;
+    }
+}
+
+//Small Mobile
+@media screen and (min-width: 300px) and (max-width: 424px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_250;
+
+            .heading-one {
+                width: $_200;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_250;
+
+            .box.one {
+                width: $_250;
+
+                .sub.container {
+                    width: $_200;
+
+                    .p.wrapper {
+                        width: $_200;
+
+
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_250;
+
+                >.paragraph {
+                    width: $_200;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_250;
+
+        .wrapper {
+            width: $_230;
+
+            .heading.container {
+                width: $_230;
+            }
+
+            #form {
+                width: $_230;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_200;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        font-size: $_10;
+    }
+}
+
+//Medium Mobile 
+@media screen and (min-width: 425px) and (max-width: 560px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_400;
+
+            .heading-one {
+                width: $_350;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_400;
+
+            .box.one {
+                width: $_270;
+
+                .sub.container {
+                    width: $_270;
+
+                    .p.wrapper {
+                        width: $_270;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_270;
+
+                >.paragraph {
+                    width: $_270;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_230;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        font-size: $_15;
+    }
+}
+
+//Large Mobile screen sizes
+@media screen and (min-width: 561px) and (max-width: 767px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_500;
+
+            .heading-one {
+                width: $_450;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_500;
+
+            .box.one {
+                width: $_200;
+
+                .sub.container {
+                    width: $_200;
+
+                    .p.wrapper {
+                        width: $_200;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_200;
+
+                >.paragraph {
+                    width: $_200;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_230;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Tablets
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_500;
+
+            .heading-one {
+                width: $_450;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_500;
+
+            .box.one {
+                width: $_200;
+
+                .sub.container {
+                    width: $_200;
+
+                    .p.wrapper {
+                        width: $_200;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_200;
+
+                >.paragraph {
+                    width: $_200;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_230;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Large Desktops/laptops
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_500;
+
+            .heading-one {
+                width: $_450;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_500;
+
+            .box.one {
+                width: $_200;
+
+                .sub.container {
+                    width: $_200;
+
+                    .p.wrapper {
+                        width: $_200;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_200;
+
+                >.paragraph {
+                    width: $_200;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_230;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//4k Desktops/Laptops
+@media screen and (min-width: 1441px) {
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_500;
+
+            .heading-one {
+                width: $_450;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_500;
+
+            .box.one {
+                width: $_200;
+
+                .sub.container {
+                    width: $_200;
+
+                    .p.wrapper {
+                        width: $_200;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_200;
+
+                >.paragraph {
+                    width: $_200;
+                }
+            }
+        }
+    }
+
+    .login,
+    .register {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username-input,
+                    .email-input,
+                    .password-input {
+                        width: $_230;
+                    }
+                }
+            }
+        }
+    }
+}
