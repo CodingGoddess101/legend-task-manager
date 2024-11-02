@@ -2,11 +2,16 @@ $_0 :0px;
 $_1 :1px;
 $_2 :2px;
 $_3 :3px;
+$_4 :4px;
 $_5 :5px;
+$_7 :7px;
 $_8 :8px;
 $_10 :10px;
+$_12 :12px;
+$_14 :14px;
 $_15 :15px;
 $_20 :20px;
+$_25 :25px;
 $_30 :30px;
 $_40 :40px;
 $_50 :50px;
@@ -21,27 +26,49 @@ $_200 :200px;
 $_230 :230px;
 $_250 :250px;
 $_270 :270px;
+$_280 :280px;
 $_300 :300px;
 $_350 :350px;
 $_400 :400px;
 $_450 :450px;
 $_500 :500px;
+$_550 :550px;
+$_600 :600px;
+$_650 :650px;
+$_700 :700px;
+$_730 :730px;
+$_750 :750px;
+$_800 :800px;
+$_850 :850px;
+$_900 :900px;
+$_950 :950px;
+$_1000 :1000px;
 $fit_content: fit-content;
 $auto: auto;
 $wrap: wrap;
 $block: block;
 $flex: flex;
+$start: flex-start;
 $alignCenter: center;
 $solid: solid;
+$none: none;
+
+$white: #ffffff;
+$dim_white: #dddddd;
+$dark_blue: #000066;
+$royal_blue: #0044aa;
+$orange: #ffaa00;
+$red: #ff0000;
+$royal_blue_faded: rgba(0, 68, 170, 0.50);
 
 * {
-    transition: all .2s ease-in-out;
-
+    transition: all .3s ease-in-out;
+    letter-spacing: $_1;
 }
 
 body {
-    background-color: #ffffff;
-    color: blue;
+    background-color: #ddd;
+    color: $royal_blue;
     font-family: calibri, Arial, Helvetica, sans-serif;
     display: block;
     margin: $_0;
@@ -50,12 +77,16 @@ body {
 }
 
 .header {
+    position: fixed;
+    top: $_0;
     width: 100%;
     margin: $_0 $auto;
-    color: #ffffff;
-    background-color: #000066;
+    color: $white;
+    background-color: $dark_blue;
     height: $_40;
+    display: $flex;
 
+    //standard header
     .heading-two {
         display: $flex;
         flex-wrap: $wrap;
@@ -64,108 +95,347 @@ body {
         padding: $_0 $_30;
         width: $_50;
         height: $_40;
+
+        .header-home-link {
+            text-decoration: none;
+            color: $white;
+        }
+
+        .bls-text {
+            display: block;
+            padding: $_0;
+            margin: $_0;
+        }
+    }
+
+    .nav-container {
+        display: $flex;
+        align-items: $alignCenter;
+        position: relative;
+        width: 100%;
+
+
+        .gear-icon.container {
+            position: absolute;
+            right: 30px;
+
+            .gear-icon {
+                display: $flex;
+                align-items: $alignCenter;
+                justify-content: $alignCenter;
+                width: $_20;
+                cursor: pointer;
+                height: $_20;
+            }
+
+        }
+
+        .drop-down.one {
+            display: $none; //$none
+            position: absolute;
+            right: 0px;
+            background-color: $dark_blue;
+            margin: 110px $_0 $_0 $_0;
+            padding: $_10 $_2;
+            border-bottom-left-radius: $_10;
+            border: $_2 $solid $royal_blue;
+
+            .user-profile.nav-button {
+                display: $block;
+                right: $_150;
+                margin-top: $_4;
+                margin-bottom: $_4;
+                width: $fit_content;
+                height: $_20;
+                background-color: $dark_blue;
+                border: $none;
+
+                a {
+                    color: $white;
+                    border-bottom: $_2 $solid $royal_blue;
+                    text-decoration: $none;
+                }
+            }
+
+            .log-out-form {
+                display: $block;
+                // position: absolute;
+                right: $_40;
+                width: $fit_content;
+                height: $_20;
+
+                .logout.nav-button {
+                    display: block;
+                    background-color: $dark_blue;
+                    border: $none;
+                    height: $_20;
+
+                    .submit-log-out {
+                        padding: $_0;
+                        margin: $_0;
+                        background-color: $dark_blue;
+                        border: $none;
+                        border-bottom: $_2 $solid $royal_blue;
+                        color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .drop-down.two {
+            display: $none; //$none
+            position: absolute;
+            right: 30px;
+            background-color: $dark_blue;
+            border-bottom-left-radius: $_10;
+            border: $_2 $solid $royal_blue;
+
+            .user-profile.nav-button {
+                display: $block;
+                right: $_150;
+                margin-top: $_4;
+                margin-bottom: $_4;
+                width: $fit_content;
+                height: $_20;
+                background-color: $dark_blue;
+                border: $none;
+
+                a {
+                    color: $white;
+                    border-bottom: $_2 $solid $royal_blue;
+                    text-decoration: $none;
+                }
+            }
+
+            .log-out-form {
+                display: $block;
+                // position: absolute;
+                right: $_40;
+                width: $fit_content;
+                height: $_20;
+
+                .logout.nav-button {
+                    display: block;
+                    background-color: $dark_blue;
+                    border: $none;
+                    height: $_20;
+
+                    .submit-log-out {
+                        padding: $_0;
+                        margin: $_0;
+                        background-color: $dark_blue;
+                        border: $none;
+                        border-bottom: $_2 $solid $royal_blue;
+                        color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
 
+button,
+a:hover,
+.submit-btn:hover {
+    cursor: pointer;
+}
+
 .home {
-    margin: $_40 $auto ;
+    margin: $_80 $auto $_60;
 
     .container {
         display: $block;
-        // width: $_450;
         margin: $_0 $auto;
-        background-color: #000066;
+        background-color: $dark_blue;
         border-radius: $_10;
 
         .heading-one {
             text-align: center;
             margin: $_0 $auto;
-            color: #ffffff;
+            color: $white;
             font-size: $_20;
             padding: $_30 $_0;
-            // width: $_400;
         }
     }
 
     .container:nth-child(2) {
         display: $flex;
         flex-wrap: $wrap;
-        background-color: #000066;
-        // width: $_450;
-        padding: $_30 $_0;
-        margin: $_10 $auto $_0;
-        border-radius: $_10;
+        background-color: $dark_blue;
+        padding: $_10 $_0;
+        margin: $_10 $auto;
 
-        .box.one {
-            // width: $_400;
+        .box {
             margin: $_0 $auto;
-
-            .sub.container {
-                display: $flex;
-                flex-wrap: $wrap;
-                margin: $_0 $auto;
-                color: #ffffff;
-                font-size: $_20;
-                border-radius: $_10;
-                // width: $_400;
-
-                .p.wrapper {
-                    // width: $_200;
-                    font-size: 14px;
-
-                    .paragraph {
-                        word-break: break-all;
-                        hyphens: auto;
-                    }
-
-                    .button {
-                        background-color: #000066;
-                        border: $_2 $solid #0044AA;
-                        font-size: 12px;
-                        padding: $_3;
-                        border-radius: $_5;
-
-                        a {
-                            color: #fff;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-
-
         }
 
-        .box.two {
-            margin: $_0 $auto;
-            text-align: start;
+        .box.one,
+        .box.two,
+        .box.three {
+            margin: $_10 $auto $_0;
+            color: $white;
 
-            >.paragraph {
-                margin: $_0 $auto;
-                color: #ffffff;
+            .paragraph {
+                display: $block;
+                color: $white;
+                margin: $_10 $auto;
+                hyphens: $auto;
+            }
+
+            .button {
+                background-color: $dark_blue;
+                border: $_2 $solid $royal_blue;
+                font-size: 12px;
+                padding: $_3;
+                display: $block;
+                border-radius: $_5;
+                margin: $_20 $auto;
+
+                .link-to-login {
+                    display: $block;
+                    margin: $_0 $auto;
+                    color: $white;
+                    text-decoration: $none;
+                }
             }
         }
     }
 }
 
-.login,
-.register {
-    // width: $_300;
-    height: auto;
-    background-color: #000066;
-    margin: $_0 $auto;
-    color: #ffffff;
+.login {
+    height: $auto;
+    background-color: $dark_blue;
+    margin: $_100 $auto $_60;
+    color: $white;
     border-radius: $_10;
-    box-shadow: $_0 $_0 $_10 $_5#0044aa;
+    box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
 
     .wrapper {
         display: $block;
         margin: $_50 $auto;
         padding: $_2 $_0;
-        width: $_250;
 
         .heading.container {
-            width: $_250;
+            margin: $_0 $auto;
+
+            .heading-one {
+                font-size: $_20;
+                margin-bottom: $_0;
+            }
+
+            .paragraph {
+                margin-top: $_2;
+                margin-bottom: $_15;
+                padding: $_0;
+            }
+        }
+
+        #form {
+            margin: $_0 $auto;
+
+            .form-field-row {
+
+                // label elements
+                .email,
+                .password {
+                    height: inherit;
+                    display: $block;
+                    height: $_20;
+                }
+
+                .email::after,
+                .password::after {
+                    content: ":";
+                }
+
+                .email-input,
+                .password-input {
+                    background-color: $dark_blue;
+                    border: $_1 $solid $royal_blue;
+                    color: $white;
+                    border-radius: $_10;
+                    padding: $_2 $_5;
+                }
+
+                .email-input::placeholder,
+                .password-input::placeholder {
+                    color: $white;
+
+                }
+
+                .submit-btn {
+                    display: $block;
+                    margin: $_0 $auto;
+                    border-radius: $_10;
+                    cursor: pointer;
+                    color: $white;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+
+            .form-field-row:nth-child(3) {
+                margin-top: $_10;
+
+            }
+
+            .form-field-row:nth-child(4) {
+                margin-bottom: $_20;
+                height: $_30;
+            }
+
+            .form-field-row:nth-child(5) {
+                display: $block;
+                margin: $_0;
+                height: $_30;
+
+                .submit-btn {
+                    margin: $_0 $_0 $_30;
+                    padding: $_0;
+                }
+            }
+
+            .form-field-row:nth-child(6) {
+                display: $block;
+                margin: $_0;
+
+                .paragraph {
+                    margin: $_20 $auto $_10;
+                    text-align: center;
+                }
+
+                a {
+                    color: $white;
+                    text-align: center;
+                    text-decoration: $none;
+                    cursor: pointer;
+                    display: $block;
+                    margin: $_0 $auto $_15;
+                    border-radius: $_10;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+        }
+    }
+}
+
+.register {
+    height: $auto;
+    background-color: $dark_blue;
+    margin: $_100 $auto $_60;
+    color: $white;
+    border-radius: $_10;
+    box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
+
+    .wrapper {
+        display: $block;
+        margin: $_50 $auto;
+        padding: $_2 $_0;
+
+        .heading.container {
             margin: $_0 $auto;
 
             .heading-one {
@@ -185,7 +455,6 @@ body {
 
         #form {
             margin: $_0 $auto;
-            width: $_250;
 
             .form-field-row {
                 display: block;
@@ -195,90 +464,646 @@ body {
                 // label elements
                 .username,
                 .email,
+                .phonenumber,
                 .password {
                     height: inherit;
                     display: $block;
-                    width: $_100;
                     height: $_20;
                 }
 
                 //insert : icon after text
                 .username::after,
+                .biotext::after,
                 .email::after,
+                .phonenumber::after,
                 .password::after {
                     content: ":";
                 }
 
                 .username-input,
                 .email-input,
+                .phonenumber-input,
                 .password-input {
-                    background-color: #000066;
+                    background-color: $dark_blue;
                     border: $_1 solid #0044AA;
-                    color: #ffffff;
+                    color: $white;
                     border-radius: $_10;
-                    width: $_230;
                     padding: $_2 $_5;
                 }
 
-                .username-input::placeholder,
-                .email-input::placeholder,
-                .password-input::placeholder {
-                    color: #ffffff;
-
-                }
-
-                .submit-btn {
-                    display: block;
-                    margin: $_0 $auto;
-                    border-radius: $_10;
-                    width: 230px;
-                    color: #ffffff;
+                .biotext-input {
+                    background-color: $dark_blue;
                     border: $_1 solid #0044AA;
-                    background-color: #000066;
+                    color: $white;
+                    padding: $_2 $_5;
+                    border-radius: $_10;
+                    resize: $none;
                 }
+
+                .username-input::placeholder,
+                .biotext-input::placeholder,
+                .email-input::placeholder,
+                .phonenumber-input::placeholder,
+                .password-input::placeholder {
+                    color: $white;
+
+                }
+
+
             }
 
+            .form-field-row:nth-child(1),
             .form-field-row:nth-child(3) {
-                margin-top: $_10;
+                margin-top: $_5;
+            }
 
+            .form-field-row:nth-child(2) {
+                margin-bottom: $_10;
             }
 
             .form-field-row:nth-child(4) {
-                margin-bottom: $_20;
-                height: $_30;
+                margin-bottom: $_10;
+                height: $auto;
             }
 
             .form-field-row:nth-child(5),
-            .form-field-row:nth-child(6) {
-                height: $_30;
+            .form-field-row:nth-child(7),
+            .form-field-row:nth-child(9) {
+                margin-top: $_5;
             }
 
-            .form-field-row:nth-child(7) {
-                display: flex;
-                margin: $_0 $auto;
-                justify-content: center;
-                align-items: center;
-                font-size: 12px;
+            .form-field-row:nth-child(6),
+            .form-field-row:nth-child(8),
+            .form-field-row:nth-child(10) {
+                margin-bottom: $_10;
+            }
 
-                a {
-                    color: #ffffff;
-                    padding-left: $_5;
+            .form-field-row:nth-child(11) {
+                display: $block;
+                height: $auto;
+                margin-top: $_30;
+                margin-bottom: $_10;
+                text-align: $alignCenter;
+
+                .submit-btn {
+                    display: block;
+                    border-radius: $_10;
+                    cursor: pointer;
+                    color: $white;
+                    border: $_1 solid #0044AA;
+                    background-color: $dark_blue;
+
+                }
+            }
+
+            .form-field-row:nth-child(12) {
+                display: $flex;
+                align-items: $alignCenter;
+                margin-top: $_5;
+                margin-bottom: $_10;
+
+                .paragraph {
+                    text-align: $alignCenter;
+                    margin: $_20 $_0 $_5;
+                }
+
+                .register-route {
+                    color: $white;
+                    cursor: pointer;
+                    text-align: center;
                 }
             }
         }
     }
 }
 
+//Tasks pages
+.user-dashboard.view-all-tasks,
+.user-dashboard.view-task {
+    margin: $_100 $auto $_60;
+
+    .welcome-text.container {
+        margin: $_0 $auto $_50;
+    }
+
+    .table-wrapper {
+        display: $block;
+        background-color: $dark_blue;
+        border-radius: $_10;
+        box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
+        margin: $_0 $auto;
+        padding-bottom: $_10;
+
+        .task-management-heading-container {
+            display: block;
+
+            >.heading-one {
+                color: $white;
+                text-align: $alignCenter;
+                font-size: $_20;
+                margin: $_10 $auto;
+            }
+        }
+
+        .task-management-heading-2nd-container {
+            display: $flex;
+            align-items: $alignCenter;
+
+            .to-multi-view-mode {
+                display: $flex;
+                align-items: $alignCenter;
+                height: $_25;
+                font-size: $_15;
+                margin-left: $_25;
+                color: $white;
+            }
+
+            >.heading-one {
+                height: $auto;
+                color: $white;
+                text-align: $alignCenter;
+                font-size: $_15;
+                margin: $_0 $auto $_0 $_150;
+            }
+        }
+
+
+        .text-route {
+            display: $flex;
+            justify-content: $start;
+            align-items: $alignCenter;
+            margin: $_0 $auto;
+
+            .heading-two {
+                display: $block;
+                color: $white;
+                font-size: $_15;
+            }
+
+            .add-new-task {
+                display: $block;
+                padding: $_2;
+                background-color: $dark_blue;
+                border: $_2 $solid $royal_blue;
+                border-radius: $_10;
+                width: $_100;
+                margin-left: $_10;
+
+                a {
+                    font-size: $_10;
+                    color: $white;
+                    text-decoration: $none;
+                }
+            }
+        }
+
+        .pdf-button.container {
+            margin: $_0 $auto;
+            background-color: $dark_blue;
+
+            .create-pdf {
+                border-radius: $_10;
+                color: $white;
+                border: $_2 $solid $royal_blue;
+                background-color: $dark_blue;
+            }
+
+        }
+
+        .table-container {
+            scrollbar-color: $dark_blue $royal_blue;
+            display: block;
+            margin: $_0 $auto;
+            overflow-x: $auto;
+            overflow-y: $auto;
+            white-space: nowrap;
+
+            .table {
+                margin: $_0 $auto $_10;
+                color: $white;
+                background-color: $dark_blue;
+                border: $_2 $solid $royal_blue;
+                border-radius: $_10;
+
+                .table-heading {
+                    height: $auto;
+
+                    .row {
+                        .row.heading {
+                            padding: $_2 $_5;
+                            text-align: start;
+                            border-bottom: $_2 $solid $royal_blue;
+                        }
+                    }
+                }
+
+                .table-body {
+                    height: $auto;
+
+                    .row {
+                        border-bottom: $_2 $solid $royal_blue;
+                        min-width: $_100;
+                        max-width: $_350;
+                        overflow-x: hidden;
+                        white-space: wrap;
+
+                        .row.data {
+                            margin: $_2 $_2 $_10;
+                            padding: $_5;
+                            font-size: $_14;
+
+                            .btn.view {
+                                color: $white;
+                            }
+
+                            //single view page
+                            .btn-views {
+                                padding: $_0 $_5;
+
+                                .edit,
+                                .delete {
+
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .row:nth-child(2) {
+                        min-width: $_150;
+                        min-width: $_350;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Task pages
+.user-dashboard.create-task,
+.user-dashboard.update-task,
+.user-dashboard.delete-task,
+
+//user profile pages
+.view-account-profile,
+.update-account-profile {
+    margin: $_100 $auto $_60;
+    background-color: $dark_blue;
+    border-radius: $_10;
+    box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
+
+    .task-container {
+        margin: $_10 $auto;
+        padding: $_20 $_0;
+
+        .heading.container {
+            margin: $_10 $auto;
+            font-size: $_20;
+            color: $white;
+            text-align: $alignCenter;
+        }
+
+
+        .form {
+            display: $flex;
+            flex-wrap: $wrap;
+            justify-items: $alignCenter;
+            border: $_2 $solid $royal_blue;
+            border-radius: $_10;
+            padding: $_20;
+            margin: $_20 $auto;
+
+            .form-field-row {
+                display: $flex;
+
+                .task-name-label,
+                .task-description-label,
+                .task-status-label,
+                .task-todays-date-label,
+                .task-due-date-label {
+                    color: $white;
+                    display: $block;
+                }
+
+                .task-name-label::after,
+                .task-description-label::after,
+                .task-status-label::after,
+                .task-todays-date-label::after,
+                .task-due-date-label::after {
+                    content: ":";
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    display: none;
+                }
+
+                input[type="date"]::-moz-calendar-picker-indicator {
+                    display: none;
+                }
+
+                input[type="date"]::-o-calendar-picker-indicator {
+                    display: none;
+                }
+
+                .task-name-input,
+                .task-description-input,
+                .task-status-input,
+                .task-todays-date-input,
+                .task-due-date-input {
+                    display: block;
+                    color: $white;
+                    resize: $none;
+                    background-color: $dark_blue;
+                    border: $none;
+                    border-bottom: $_1 $solid royalblue;
+                }
+
+                .task-name-input::placeholder,
+                .task-description-input::placeholder {
+                    color: $white;
+                }
+            }
+
+            .form-field-row:nth-child(11) {
+                display: $flex;
+                align-items: $alignCenter;
+                margin: $_20 $auto $_10;
+
+                .btn-container {
+                    display: $flex;
+                    align-items: $alignCenter;
+                    border: $_2 $solid $royal_blue;
+                    justify-items: $alignCenter;
+                    justify-content: space-between;
+                    margin: $_5 $_10;
+                    padding: $_5;
+
+                    .revert-submit {
+                        text-decoration: $none;
+                        border: $none;
+                        background-color: $dark_blue;
+                        color: $white;
+                        border-radius: $_10;
+                    }
+
+                    .submit-btn.create {
+                        border: $none;
+                        background-color: $dark_blue;
+                        color: $white;
+                        border-radius: $_10;
+                    }
+                }
+            }
+        }
+    }
+
+    .task-container-account {
+        margin: $_10 $auto;
+        padding: $_20 $_0;
+
+        .heading.container {
+            margin: $_10 $auto;
+            font-size: $_20;
+            color: $white;
+            text-align: $alignCenter;
+        }
+
+        .data-container {
+            display: $flex;
+            flex-wrap: $wrap;
+            align-items: $start;
+            border: $_2 $solid $royal_blue;
+            border-radius: $_10;
+            padding: $_10;
+            margin: $_10 $auto;
+
+            .data-item {
+                display: $block;
+                height: $auto;
+                overflow-x: $auto;
+                white-space: $wrap;
+                color: $white;
+                padding: $_10 $_0;
+                width: $auto;
+
+                .username-label,
+                .bio-label,
+                .email-label,
+                .phonenumber-label {
+                    display: block;
+                    margin: $_0;
+                    height: $_20;
+                    margin: $_10 $auto $_0;
+                }
+
+                .username-label::after,
+                .bio-label::after,
+                .email-label::after,
+                .phonenumber-label::after {
+                    content: ":";
+                }
+
+                .username,
+                .bio,
+                .email,
+                .phonenumber {
+                    display: block;
+                    margin: $_5 $_0 $_0;
+                    border-radius: $_10;
+                    height: $_20;
+                    padding: $_4;
+                    border: $_2 $solid $royal_blue;
+                }
+            }
+
+
+
+
+            .data-item:nth-child(2) {
+
+                margin: $_0 $_0 $_0;
+            }
+
+            .data-item:nth-child(4) {
+                margin: $_0 $_0 $_10;
+            }
+
+            .data-item:nth-child(6),
+            .data-item:nth-child(8) {
+                margin: $_0 $_0 $_10;
+            }
+
+            .data-item:nth-child(9) {
+                display: flex;
+                flex-wrap: wrap;
+
+                a {
+                    padding: $_2 $_5;
+                    display: block;
+                    border: $_2 $solid $royal_blue;
+                    border-radius: $_10;
+                    color: $white;
+                    text-decoration: $none;
+                    margin: $_5;
+                    width: $auto;
+                }
+            }
+        }
+    }
+
+    //profile update page
+    .task-container-account-update {
+        margin: $_10 $auto;
+        padding: $_20 $_0;
+
+        .heading.container {
+            margin: $_10 $auto;
+            font-size: $_20;
+            color: $white;
+            text-align: $alignCenter;
+        }
+
+        .form {
+            display: $flex;
+            flex-wrap: $wrap;
+            align-items: $start;
+            border: $_2 $solid $royal_blue;
+            border-radius: $_10;
+            padding: $_10;
+            margin: $_10 $auto;
+
+            .form-field-row {
+                // display: $block;
+                // height: $auto;
+                // overflow-x: $auto;
+                // white-space: $wrap;
+                // color: $white;
+                // padding: $_10 $_0;
+                // width: $auto;
+
+                .username-label,
+                .biotext-label,
+                .email-label,
+                .phonenumber-label,
+                .password-label {
+                    display: block;
+                    border-radius: $_10;
+                    background-color: $dark_blue;
+                    color: $white;
+                    margin: $_0;
+                    height: $_20;
+                    margin: $_10 $auto $_0;
+                }
+
+                .username-label::after,
+                .biotext-label::after,
+                .email-label::after,
+                .phonenumber-label::after,
+                .password-label::after {
+                    content: ":";
+                }
+
+                .username-input,
+                .biotext-input,
+                .email-input,
+                .phonenumber-input,
+                .password-input {
+                    background-color: $dark_blue;
+                    display: block;
+                    margin: $_5 $_0 $_0;
+                    border-radius: $_10;
+                    height: $_20;
+                    padding: $_4;
+                    border: $_2 $solid $royal_blue;
+                }
+
+                .username-input::placeholder,
+                .biotext-input::placeholder,
+                .email-input::placeholder,
+                .phonenumber-input::placeholder,
+                .password-input::placeholder {
+                    color: $white;
+                }
+            }
+
+            .form-field-row:nth-child(11) {
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                margin: $_0 $auto;
+                justify-items: center;
+
+                .btn {
+                    display: $block;
+                    margin: $_0 $auto;
+                    text-align: center;
+
+                    .back-to-profile-view-mode,
+                    .update-route {
+                        display: block;
+                        border-radius: $_10;
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_2 $solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.user-dashboard.view-task {
+    margin: $_100 $auto $_60;
+
+    .task-management-heading.container {
+        display: $block;
+        position: relative;
+        margin: $_10 $auto;
+    }
+
+    .single-task-view-container {
+        display: $block;
+        margin: $_0 $auto;
+
+        .view-task-data-container {
+            margin: $_0 $_20;
+
+            .data-item {
+                display: block;
+            }
+
+            .data-item:nth-child(1) {
+                width: $_100;
+            }
+
+            .data-item:nth-child(2) {
+                width: $_200;
+            }
+        }
+
+    }
+}
+
+//User Profile pages
+
+
+
+//not found page
 .notfound {
-    width: $_350;
     margin: $_20 $auto $_0;
 
     .wrapper {
         display: $flex;
+        margin: $_0 $auto;
         align-items: $alignCenter;
 
         .heading-one {
-            color: #000066;
+            color: $dark_blue;
         }
 
         .notfound-route {
@@ -295,8 +1120,8 @@ body {
     text-align: center;
     position: fixed;
     bottom: $_0;
-    background-color: #000066;
-    color: #ffffff;
+    background-color: $dark_blue;
+    color: $white;
 
     .paragraph {
         padding: $_10 $_0;
@@ -307,7 +1132,71 @@ body {
 }
 
 //Small Mobile
-@media screen and (min-width: 300px) and (max-width: 424px) {
+@media screen and (min-width: 300px) and (max-width: 424.9px) {
+
+    .header.standard {
+        .heading-two {
+            width: $_200;
+
+            a {
+                font-size: $_15;
+                width: $_200;
+            }
+        }
+    }
+
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: 400px;
+            font-size: 12px;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                .gear-icon {
+                    width: $_20;
+                    height: $_20;
+                }
+
+            }
+
+            .drop-down.one {
+                width: 140px;
+            }
+
+            .drop-down.one.visible {
+                display: block;
+            }
+        }
+    }
+
+    .header.two.authorized {
+        .heading-two {
+            width: 400px;
+            font-size: 12px;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                .gear-icon {
+                    width: $_20;
+                    height: $_20;
+                }
+
+            }
+
+            .drop-down.one {
+                width: 140px;
+            }
+
+            .drop-down.one.visible {
+                display: block;
+                margin: 83px $_0 $_0;
+            }
+        }
+    }
+
     .home {
         margin-bottom: $_80;
 
@@ -315,38 +1204,104 @@ body {
             width: $_250;
 
             .heading-one {
-                width: $_200;
+                width: $_230;
             }
         }
 
         .container:nth-child(2) {
             width: $_250;
+            margin: $_10 $auto;
 
             .box.one {
-                width: $_250;
+                width: $_230;
+                margin: $_0 $_10;
 
-                .sub.container {
-                    width: $_200;
+                .button {
+                    display: $block;
+                    width: $_150;
+                    margin: $_0 $auto;
 
-                    .p.wrapper {
-                        width: $_200;
-
-
+                    .link-to-login {
+                        display: block;
+                        margin: $_0 $auto;
+                        width: $_100;
                     }
                 }
             }
 
             .box.two {
-                width: $_250;
+                width: $_230;
+                padding: $_0 $_10;
 
-                >.paragraph {
-                    width: $_200;
+                .p-wrapper {
+                    width: $_250;
+                }
+            }
+
+            .box.three {
+
+                width: $_230;
+                padding: $_0 $_10;
+
+                .p-wrapper {
+                    width: $_250;
                 }
             }
         }
     }
 
-    .login,
+    .login {
+        width: $_250;
+
+        .wrapper {
+            width: $_230;
+
+            .heading.container {
+                width: $_230;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_230;
+
+                .form-field-row {
+                    width: $_200;
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 212px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .register {
         width: $_250;
 
@@ -355,20 +1310,469 @@ body {
 
             .heading.container {
                 width: $_230;
+
+                .paragraph {
+                    width: $_230;
+                }
             }
 
             #form {
                 width: $_230;
 
                 .form-field-row {
+                    width: $_230;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_200;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_200;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_14;
+
+                    .submit-btn {
+                        width: 212px;
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+
+                    .paragraph {
+                        font-size: 12px;
+                        width: 212px;
+                    }
+
+                    .register-route {
+                        font-size: 14px;
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        width: 212px;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    //Tasks pages
+    .user-dashboard.view-all-tasks {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_250;
+        }
+
+        .table-wrapper {
+            width: $_250;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                    font-size: $_15;
+                }
+            }
+
+            .text-route {
+                display: block;
+                width: $_250;
+
+                .heading-two {
+                    width: $_230;
+                    text-align: $alignCenter;
+                    border-bottom: $_1 $solid #ffffff;
+                    margin: $_0 $auto;
+                }
+
+                .add-new-task {
+                    display: $block;
+                    width: $_230;
+                    margin: $_10 $auto;
+
+                    a {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        display: $block;
+                        width: $_200;
+                    }
+                }
+
+                .pdf-button.container {
+                    display: $block;
+                    width: $_230;
+                    margin: $_10 $auto;
+
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_230;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_230;
+
+                .table {
+                    width: $_230;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_250;
+        }
+
+        .table-wrapper {
+            width: $_250;
+
+            .task-management-heading-2nd-container {
+                display: block;
+                width: $_250;
+
+                .to-multi-view-mode {
+                    display: block;
+                    text-align: center;
+                    width: 250px;
+                    margin: $_10 $auto $_2;
+                    padding: $_10 $_0 $_0;
+                }
+
+                .heading-one {
+                    width: 250px;
+                    font-size: $_15;
+                    margin: $_5 $auto $_0;
+                    padding: $_0 $_0 $_30;
+                }
+            }
+
+            .text-route {
+                display: block;
+                width: $_250;
+
+                .heading-two {
+                    width: $_230;
+                    text-align: $alignCenter;
+                    border-bottom: $_1 $solid #ffffff;
+                    margin: $_0 $auto;
+                }
+
+                .add-new-task {
+                    display: $block;
+                    width: $_230;
+                    margin: $_10 $auto;
+
+                    a {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        display: $block;
+                        width: $_200;
+                    }
+                }
+
+                .pdf-button.container {
+                    display: $block;
+                    width: $_230;
+                    margin: $_10 $auto;
+
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_230;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_230;
+
+                .table {
+                    width: $_230;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+
+
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_280;
+
+        .task-container {
+            width: $_280;
+
+            .heading.container {
+                width: $_200;
+            }
+
+            .form {
+                width: $_200;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: $_200;
+                        margin: $_10 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: $_200;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: $_200;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: $_200;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: block;
+
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        margin: $_10 $auto;
+                        border-radius: $_10;
+                        width: $_150;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_250;
+
+            .heading.container {
+                width: $_230;
+            }
+
+            .data-container {
+                width: $_230;
+
+                .data-item {
+                    margin-left: $_0;
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                        font-size: $_15;
+                    }
+
+                    .username {
+                        width: $_200;
+                        font-size: $_15;
+                    }
+
+                    .bio {
+                        width: $_200;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                        font-size: 13px;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_200;
+                        font-size: $_15;
+                    }
+                }
+
+
+                .data-item:nth-child(9) {
+                    display: block;
+                    width: $_200;
+                    text-align: center;
+                    margin: $_0 $auto;
+
+                    a {
+                        display: block;
+                        margin: $_10 $auto;
+                        width: $_180;
+                        font-size: $_12;
+                    }
+
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_280;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 230px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 220px;
+                        font-size: 14px;
+                    }
+
+                    .biotext-input {
+                        width: 220px;
+                        font-size: 14px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 220px;
+                        font-size: 14px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 220px;
+
+                    .btn {
+                        width: $_200;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            margin: $_10 $auto;
+                            font-size: 14px;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notfound {
+        width: $_280;
+
+        .wrapper {
+            font-size: $_14;
         }
     }
 
@@ -378,44 +1782,177 @@ body {
 }
 
 //Medium Mobile 
-@media screen and (min-width: 425px) and (max-width: 560px) {
+@media screen and (min-width: 425px) and (max-width: 560.9px) {
+    .header.standard {
+        .heading-two {
+            width: $_200;
+
+            a {
+                font-size: $_15;
+                width: $_200;
+            }
+        }
+    }
+
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: $_300;
+            font-size: 14px;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                .gear-icon {
+                    width: $_20;
+                    height: $_20;
+                }
+
+            }
+
+            .drop-down.one {
+                width: 140px;
+            }
+
+            .drop-down.one.visible {
+                display: block;
+            }
+        }
+    }
+
+    .header.two.authorized {
+        .heading-two {
+            width: $_300;
+            font-size: 14px;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                .gear-icon {
+                    width: $_20;
+                    height: $_20;
+                }
+
+            }
+
+            .drop-down.one {
+                width: 140px;
+            }
+
+            .drop-down.one.visible {
+                display: block;
+                margin: 83px $_0 $_0;
+            }
+        }
+    }
+
     .home {
         margin-bottom: $_80;
 
         .container {
-            width: $_400;
+            width: $_350;
 
             .heading-one {
                 width: $_350;
             }
+
+            .button {
+                display: $block;
+                width: $_150;
+                margin: $_0 $auto;
+            }
         }
 
         .container:nth-child(2) {
-            width: $_400;
+            width: $_350;
+            margin: $_10 $auto;
 
             .box.one {
-                width: $_270;
+                width: $_150;
 
-                .sub.container {
-                    width: $_270;
+                .p.wrapper {
+                    width: $_150;
+                }
 
-                    .p.wrapper {
-                        width: $_270;
+                .button {
+                    display: $block;
+                    width: $_150;
+                    margin: $_0 $auto;
+
+                    .link-to-login {
+                        display: block;
+                        margin: $_0 $auto;
+                        width: $_100;
                     }
                 }
             }
 
             .box.two {
-                width: $_270;
+                width: $_150;
 
-                >.paragraph {
-                    width: $_270;
+                .p-wrapper {
+                    width: $_150;
+                }
+            }
+
+            .box.three {
+                width: $_350;
+                padding: $_0 $_15;
+            }
+        }
+    }
+
+    .login {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 242px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 242px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
                 }
             }
         }
     }
 
-    .login,
     .register {
         width: $_350;
 
@@ -430,14 +1967,443 @@ body {
                 width: $_250;
 
                 .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_230;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_230;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_15;
+
+                    .submit-btn {
+                        width: 242px;
+
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+                    width: 242px;
+                    margin: $_0;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    .register-route {
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    //Tasks pages
+    .user-dashboard.view-all-tasks {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_350;
+        }
+
+        .table-wrapper {
+            width: $_350;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                }
+            }
+
+            .text-route {
+                display: block;
+                width: $_350;
+
+                .heading-two {
+                    width: $_300;
+                    text-align: $alignCenter;
+                    border-bottom: $_1 $solid #ffffff;
+                    margin: $_0 $auto;
+                }
+
+                .add-new-task {
+                    display: $block;
+                    width: $_250;
+                    margin: $_10 $auto;
+
+                    a {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        display: $block;
+                        width: $_230;
+                    }
+                }
+
+                .pdf-button.container {
+                    display: $block;
+                    width: $_250;
+                    margin: $_10 $auto;
+
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_250;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_300;
+
+                .table {
+                    width: $_300;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_350;
+        }
+
+        .table-wrapper {
+            width: $_350;
+
+            .task-management-heading-2nd-container {
+                display: block;
+                width: $_350;
+
+                .to-multi-view-mode {
+                    display: block;
+                    text-align: center;
+                    width: $_350;
+                    margin: $_10 $auto $_2;
+                    padding: $_10 $_0 $_0;
+                }
+
+                .heading-one {
+                    width: $_350;
+                    font-size: $_20;
+                    margin: $_5 $auto $_0;
+                    padding: $_0 $_0 $_30;
+                }
+            }
+
+            .text-route {
+                display: block;
+                width: $_350;
+
+                .heading-two {
+                    width: $_280;
+                    text-align: $alignCenter;
+                    border-bottom: $_1 $solid #ffffff;
+                    margin: $_0 $auto;
+                }
+
+                .pdf-button.container {
+                    display: $block;
+                    width: $_280;
+                    margin: $_10 $auto;
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_280;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_280;
+
+                .table {
+                    width: $_280;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_350;
+
+        .task-container {
+            width: $_350;
+
+            .heading.container {
+                width: $_300;
+            }
+
+            .form {
+                width: $_250;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: $_230;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: $_230;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: $_230;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: $_230;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: block;
+
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        margin: $_10 $auto;
+                        border-radius: $_10;
+                        width: $_230;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_350;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            .data-container {
+                width: $_250;
+
+                .data-item {
+                    margin-left: $_0;
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                        font-size: $_15;
+                    }
+
+                    .username {
+                        width: $_230;
+                        font-size: $_15;
+                    }
+
+                    .bio {
+                        width: $_230;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                        font-size: 13px;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_230;
+                        font-size: $_15;
+                    }
+                }
+
+
+                .data-item:nth-child(9) {
+                    width: $_250;
+                    justify-content: center;
+                    display: block;
+                    text-align: center;
+
+                    a {
+                        display: block;
+                        margin: $_10 $auto;
+                        width: $_200;
+                        font-size: $_12;
+                    }
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_350;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 280px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 250px;
+                        font-size: 16px;
+                    }
+
+                    .biotext-input {
+                        width: 250px;
+                        font-size: 16px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 250px;
+                        font-size: 16px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 250px;
+
+                    .btn {
+                        width: $_230;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            margin: $_10 $auto;
+                            font-size: $_15;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notfound {
+        width: $_300;
+
+        .wrapper {
+            font-size: 14px;
         }
     }
 
@@ -447,12 +2413,91 @@ body {
 }
 
 //Large Mobile screen sizes
-@media screen and (min-width: 561px) and (max-width: 767px) {
+@media screen and (min-width: 561px) and (max-width: 767.9px) {
+    .header.standard {
+        .heading-two {
+            width: $_200;
+
+            a {
+                font-size: $_15;
+                width: $_200;
+            }
+        }
+    }
+
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: $_300;
+            font-size: $_15;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
+
+            }
+
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
+
+            .drop-down.two {
+                display: $flex;
+                width: $_250;
+                align-items: $alignCenter;
+                border: $none;
+
+                .user-profile.nav-button {
+                    width: $_150;
+
+                    a {
+                        border-bottom: $none;
+                    }
+                }
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
+                }
+            }
+        }
+    }
+
+    .header.two.authorized {
+        .heading-two {
+            width: $_300;
+            font-size: $_15;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
+            }
+
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
+
+            .drop-down.two {
+                display: $flex;
+                width: $_100;
+                align-items: $alignCenter;
+                border: $none;
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
+                }
+            }
+        }
+    }
+
     .home {
         margin-bottom: $_80;
 
         .container {
-            width: $_500;
+            width: $_450;
 
             .heading-one {
                 width: $_450;
@@ -460,16 +2505,25 @@ body {
         }
 
         .container:nth-child(2) {
-            width: $_500;
+            width: $_450;
+            margin: $_10 $auto;
 
             .box.one {
                 width: $_200;
 
-                .sub.container {
+                .p.wrapper {
                     width: $_200;
+                }
 
-                    .p.wrapper {
-                        width: $_200;
+                .button {
+                    display: $block;
+                    width: $_180;
+                    margin: $_0 $auto;
+
+                    .link-to-login {
+                        display: block;
+                        margin: $_0 $auto;
+                        width: $_150;
                     }
                 }
             }
@@ -477,14 +2531,70 @@ body {
             .box.two {
                 width: $_200;
 
-                >.paragraph {
+                .p-wrapper {
                     width: $_200;
+                }
+            }
+
+            .box.three {
+                width: $_550;
+                padding: $_0 $_15;
+            }
+        }
+    }
+
+    .login {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 242px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 242px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
                 }
             }
         }
     }
 
-    .login,
     .register {
         width: $_350;
 
@@ -499,57 +2609,597 @@ body {
                 width: $_250;
 
                 .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_230;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_230;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_15;
+
+                    .submit-btn {
+                        width: 242px;
+
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+                    width: 242px;
+                    margin: $_0;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    .register-route {
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    //Tasks pages
+    .user-dashboard.view-all-tasks {
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_500;
+        }
+
+        .table-wrapper {
+            width: $_500;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                }
+            }
+
+            .text-route {
+                width: $_450;
+            }
+
+            .pdf-button.container {
+                .create-pdf {
+                    width: $_180;
+                }
+            }
+
+            .table-container {
+                width: $_450;
+
+                .table {
+                    width: $_450;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_500;
+        }
+
+        .table-wrapper {
+            width: $_500;
+
+            .task-management-heading-2nd-container {
+                display: $block;
+                width: $_500;
+
+                .to-multi-view-mode {
+                    display: $block;
+                    text-align: $alignCenter;
+                    width: $_450;
+                    margin: $_10 $auto $_2;
+                    padding: $_10 $_0 $_0;
+                }
+
+                .heading-one {
+                    width: $_450;
+                    font-size: $_20;
+                    margin: $_5 $auto $_0;
+                    padding: $_0 $_0 $_30;
+                }
+            }
+
+            .text-route {
+                display: $block;
+                width: $_450;
+
+                .heading-two {
+                    width: $_450;
+                    text-align: $alignCenter;
+                    border-bottom: $_1 $solid #ffffff;
+                    margin: $_0 $auto;
+                }
+
+                .pdf-button.container {
+                    display: $block;
+                    width: $_450;
+                    margin: $_10 $auto;
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_450;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_450;
+
+                .table {
+                    width: $_450;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_400;
+
+        .task-container {
+            width: $_350;
+
+            .heading.container {
+                width: $_300;
+            }
+
+            .form {
+                width: $_250;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: 240px;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: 240px;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: 240px;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: 240px;
+                        margin: $_10 $_0 $_0 $_0;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: block;
+
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        margin: $_10 $auto;
+                        border-radius: $_10;
+                        width: $_230;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_300;
+
+            .heading.container {
+                width: $_250;
+            }
+
+            .data-container {
+                width: $_250;
+
+                .data-item {
+                    margin-left: $_0;
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                    }
+
+                    .username {
+                        width: $_230;
+                    }
+
+                    .bio {
+                        width: $_230;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_230;
+                    }
+                }
+
+
+                .data-item:nth-child(9) {
+                    width: $_250;
+                    justify-content: center;
+                    display: block;
+                    text-align: center;
+
+                    a {
+                        display: block;
+                        margin: $_10 $auto;
+                        width: $_200;
+                        font-size: $_12;
+                    }
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_400;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 300px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 280px;
+                        font-size: 16px;
+                    }
+
+                    .biotext-input {
+                        width: 280px;
+                        font-size: 16px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 280px;
+                        font-size: 16px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 280px;
+
+                    .btn {
+                        width: $_250;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            margin: $_10 $auto;
+                            font-size: $_15;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notfound {
+        width: $_300;
+
+        .wrapper {
+            font-size: 14px;
         }
     }
 }
 
 //Tablets
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .home {
-        margin-bottom: $_80;
+@media screen and (min-width: 768px) and (max-width: 1024.9px) {
+    .header.standard {
+        .heading-two {
+            width: $_200;
 
-        .container {
-            width: $_500;
-
-            .heading-one {
-                width: $_450;
+            a {
+                font-size: $_15;
+                width: $_200;
             }
         }
+    }
 
-        .container:nth-child(2) {
-            width: $_500;
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: $_250;
+            font-size: $_15;
+        }
 
-            .box.one {
-                width: $_200;
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
 
-                .sub.container {
-                    width: $_200;
-
-                    .p.wrapper {
-                        width: $_200;
-                    }
-                }
             }
 
-            .box.two {
-                width: $_200;
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
 
-                >.paragraph {
+            .drop-down.two {
+                display: $flex;
+                width: $_300;
+                align-items: $alignCenter;
+                border: $none;
+
+                .user-profile.nav-button {
                     width: $_200;
+
+                    a {
+                        border-bottom: $none;
+                    }
+                }
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
                 }
             }
         }
     }
 
-    .login,
+    .header.two.authorized {
+        .heading-two {
+            width: $_250;
+            font-size: $_15;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
+            }
+
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
+
+            .drop-down.two {
+                display: $flex;
+                width: $_100;
+                align-items: $alignCenter;
+                border: $none;
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
+                }
+            }
+        }
+    }
+
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_550;
+
+            .heading-one {
+                width: $_500;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_550;
+
+            .box.one {
+                width: $_230;
+
+                .p.wrapper {
+                    width: $_230;
+
+                    .paragraph {
+                        width: $_230;
+                    }
+                }
+
+                .button {
+                    width: $_200;
+
+                    .link-to-login {
+                        width: $_180;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_230;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            .box.three {
+                width: $_550;
+
+                .paragraph {
+                    width: $_500;
+                }
+            }
+        }
+    }
+
+    .login {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 242px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 242px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .register {
         width: $_350;
 
@@ -564,57 +3214,616 @@ body {
                 width: $_250;
 
                 .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_230;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_230;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_15;
+
+                    .submit-btn {
+                        width: 242px;
+
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+                    width: 242px;
+                    margin: $_0;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    .register-route {
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    //Tasks pages
+    .user-dashboard.view-all-tasks {
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_650;
+        }
+
+        .table-wrapper {
+            width: $_650;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                }
+            }
+
+            .text-route {
+                width: $_600;
+            }
+
+            .pdf-button.container {
+                .create-pdf {
+                    width: $_200;
+                }
+            }
+
+            .table-container {
+                width: $_600;
+
+                .table {
+                    width: $_600;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_600;
+        }
+
+        .table-wrapper {
+            width: $_600;
+
+            .task-management-heading-2nd-container {
+                position: relative;
+                display: $flex;
+                align-items: $alignCenter;
+                margin-bottom: $_20;
+
+                .to-multi-view-mode {
+                    display: $flex;
+                    margin: $_0 $auto;
+                    padding: $_10 $_0;
+                    align-items: $alignCenter;
+                }
+
+                .heading-one {
+                    display: block;
+                    margin: $_0 $auto;
+                    padding: $_10 $_0;
+                    width: $_250;
+                }
+            }
+
+            .text-route {
+                position: relative;
+                display: $flex;
+                align-items: $alignCenter;
+                width: $_550;
+                height: $_40;
+
+                .heading-two {
+                    position: absolute;
+                    left: $_0;
+                    width: $_150;
+                    margin: $_0 $auto;
+                }
+
+                .pdf-button.container {
+                    position: absolute;
+                    display: $block;
+                    right: $_0;
+                    width: $_150;
+                    margin: $_10 $auto;
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_150;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_550;
+
+                .table {
+                    width: $_550;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    //Task pages
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_600;
+
+        .task-container {
+            width: $_550;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .form {
+                width: $_450;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        width: $_150;
+                        border-radius: $_10;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_600;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .data-container {
+                width: 420px;
+
+                .data-item {
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                    }
+
+                    .username {
+                        width: $_300;
+                    }
+
+                    .bio {
+                        width: $_300;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_300;
+                    }
+                }
+
+                .data-item:nth-child(1),
+                .data-item:nth-child(3),
+                .data-item:nth-child(5),
+                .data-item:nth-child(7) {
+                    width: $_100;
+                }
+
+                .data-item:nth-child(2) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(4) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(6),
+                .data-item:nth-child(8) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(9) {
+                    width: 410px;
+                    margin: $_0 $auto;
+                    justify-content: center;
+
+                    a {
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_500;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 420px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .biotext-input {
+                        width: 300px;
+                        font-size: 16px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 350px;
+
+                    .btn {
+                        width: $_150;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            font-size: $_15;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .notfound {
+        width: $_300;
+
+        .wrapper {
+            font-size: 14px;
         }
     }
 }
 
 //Large Desktops/laptops
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-    .home {
-        margin-bottom: $_80;
+@media screen and (min-width: 1025px) and (max-width: 1440.9px) {
+    .header.standard {
+        .heading-two {
+            width: $_200;
 
-        .container {
-            width: $_500;
-
-            .heading-one {
-                width: $_450;
+            a {
+                font-size: $_15;
+                width: $_200;
             }
         }
+    }
 
-        .container:nth-child(2) {
-            width: $_500;
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: $_250;
+            font-size: $_15;
+        }
 
-            .box.one {
-                width: $_200;
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
 
-                .sub.container {
-                    width: $_200;
-
-                    .p.wrapper {
-                        width: $_200;
-                    }
-                }
             }
 
-            .box.two {
-                width: $_200;
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
 
-                >.paragraph {
+            .drop-down.two {
+                display: $flex;
+                width: $_300;
+                align-items: $alignCenter;
+                border: $none;
+
+                .user-profile.nav-button {
                     width: $_200;
+
+                    a {
+                        border-bottom: $none;
+                    }
+                }
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
                 }
             }
         }
     }
 
-    .login,
+    .header.two.authorized {
+        .heading-two {
+            width: $_250;
+            font-size: $_15;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
+            }
+
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
+
+            .drop-down.two {
+                display: $flex;
+                width: $_100;
+                align-items: $alignCenter;
+                border: $none;
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
+                }
+            }
+        }
+    }
+
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_550;
+
+            .heading-one {
+                width: $_500;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_550;
+
+            .box.one {
+                width: $_230;
+
+                .p.wrapper {
+                    width: $_230;
+
+                    .paragraph {
+                        width: $_230;
+                    }
+                }
+
+                .button {
+                    width: $_200;
+
+                    .link-to-login {
+                        width: $_180;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_230;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            .box.three {
+                width: $_550;
+
+                .paragraph {
+                    width: $_500;
+                }
+            }
+        }
+    }
+
+    .login {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 242px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 242px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .register {
         width: $_350;
 
@@ -629,57 +3838,614 @@ body {
                 width: $_250;
 
                 .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_230;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_230;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_15;
+
+                    .submit-btn {
+                        width: 242px;
+
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+                    width: 242px;
+                    margin: $_0;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    .register-route {
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    ///Tasks pages
+    .user-dashboard.view-all-tasks {
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_900;
+        }
+
+        .table-wrapper {
+            width: $_900;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                }
+            }
+
+            .text-route {
+                width: $_850;
+            }
+
+            .pdf-button.container {
+                .create-pdf {
+                    width: $_200;
+                }
+            }
+
+            .table-container {
+                width: $_850;
+
+                .table {
+                    width: $_850;
+
+                    .theading {
+                        width: $_150;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_850;
+        }
+
+        .table-wrapper {
+            width: $_850;
+
+            .task-management-heading-2nd-container {
+                display: $flex;
+                align-items: $alignCenter;
+                margin-bottom: $_20;
+
+                .to-multi-view-mode {
+                    display: $flex;
+                    font-size: 16px;
+                    padding: $_10 $_0;
+                    align-items: $alignCenter;
+                }
+
+                .heading-one {
+                    display: $block;
+                    margin: $_0 $auto;
+                    padding: $_10 $_0;
+                    font-size: 18px;
+                    width: $_280;
+                }
+            }
+
+            .text-route {
+                position: relative;
+                display: $flex;
+                align-items: $alignCenter;
+                width: $_800;
+                height: $_40;
+
+                .heading-two {
+                    position: absolute;
+                    left: $_0;
+                    width: $_150;
+                    margin: $_0 $auto;
+                }
+
+                .pdf-button.container {
+                    position: absolute;
+                    display: $block;
+                    right: $_0;
+                    width: $_150;
+                    margin: $_10 $auto;
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_150;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_800;
+
+                .table {
+                    width: $_800;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_600;
+
+        .task-container {
+            width: $_600;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .form {
+                width: $_450;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        width: $_150;
+                        border-radius: $_10;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_600;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .data-container {
+                width: 420px;
+
+                .data-item {
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                    }
+
+                    .username {
+                        width: $_300;
+                    }
+
+                    .bio {
+                        width: $_300;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_300;
+                    }
+                }
+
+                .data-item:nth-child(1),
+                .data-item:nth-child(3),
+                .data-item:nth-child(5),
+                .data-item:nth-child(7) {
+                    width: $_100;
+                }
+
+                .data-item:nth-child(2) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(4) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(6),
+                .data-item:nth-child(8) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(9) {
+                    width: 410px;
+                    margin: $_0 $auto;
+                    justify-content: center;
+
+                    a {
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_500;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 420px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .biotext-input {
+                        width: 300px;
+                        font-size: 16px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 350px;
+
+                    .btn {
+                        width: $_150;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            font-size: $_15;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notfound {
+        width: $_300;
+
+        .wrapper {
+            font-size: $_15;
         }
     }
 }
 
 //4k Desktops/Laptops
 @media screen and (min-width: 1441px) {
-    .home {
-        margin-bottom: $_80;
+    .header.standard {
+        .heading-two {
+            width: $_200;
 
-        .container {
-            width: $_500;
-
-            .heading-one {
-                width: $_450;
+            a {
+                font-size: $_15;
+                width: $_200;
             }
         }
+    }
 
-        .container:nth-child(2) {
-            width: $_500;
+    //header authorized with info
+    .header.authorized {
+        .heading-two {
+            width: $_200;
+            font-size: $_15;
+        }
 
-            .box.one {
-                width: $_200;
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
 
-                .sub.container {
-                    width: $_200;
-
-                    .p.wrapper {
-                        width: $_200;
-                    }
-                }
             }
 
-            .box.two {
-                width: $_200;
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
 
-                >.paragraph {
+            .drop-down.two {
+                display: $flex;
+                width: $_400;
+                align-items: $alignCenter;
+                border: $none;
+
+                .user-profile.nav-button {
                     width: $_200;
+
+                    a {
+                        border-bottom: $none;
+                    }
+                }
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
                 }
             }
         }
     }
 
-    .login,
+    .header.two.authorized {
+        .heading-two {
+            width: $_200;
+            font-size: $_15;
+        }
+
+        .nav-container {
+            .gear-icon.container {
+                display: $none;
+            }
+
+            .drop-down.one,
+            .drop-down.one.visible {
+                display: $none;
+            }
+
+            .drop-down.two {
+                display: $flex;
+                width: $_100;
+                align-items: $alignCenter;
+                border: $none;
+
+                .log-out-form .logout.nav-button .submit-log-out {
+                    border-bottom: $none;
+                }
+            }
+        }
+    }
+
+    .home {
+        margin-bottom: $_80;
+
+        .container {
+            width: $_550;
+
+            .heading-one {
+                width: $_500;
+            }
+        }
+
+        .container:nth-child(2) {
+            width: $_550;
+
+            .box.one {
+                width: $_230;
+
+                .p.wrapper {
+                    width: $_230;
+
+                    .paragraph {
+                        width: $_230;
+                    }
+                }
+
+                .button {
+                    width: $_200;
+
+                    .link-to-login {
+                        width: $_180;
+                    }
+                }
+            }
+
+            .box.two {
+                width: $_230;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            .box.three {
+                width: $_550;
+
+                .paragraph {
+                    width: $_500;
+                    margin: $_0 $auto;
+                }
+            }
+        }
+    }
+
+    .login {
+        width: $_350;
+
+        .wrapper {
+            width: $_300;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .email,
+                    .password {
+                        width: $_200;
+                    }
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .submit-btn {
+                        width: 242px;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    width: 242px;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .register {
         width: $_350;
 
@@ -694,14 +4460,425 @@ body {
                 width: $_250;
 
                 .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .biotext,
+                    .email,
+                    .phonenumber,
+                    .password {
+                        width: $_230;
+                        font-size: $_14;
+                    }
 
                     .username-input,
+                    .biotext-input,
                     .email-input,
+                    .phonenumber-input,
                     .password-input {
                         width: $_230;
                     }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: $_12;
+                    }
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_30;
+                }
+
+                .form-field-row:nth-child(11) {
+                    font-size: $_15;
+
+                    .submit-btn {
+                        width: 242px;
+
+                    }
+                }
+
+                .form-field-row:nth-child(12) {
+                    display: block;
+                    height: auto;
+                    width: 242px;
+                    margin: $_0;
+
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    .register-route {
+                        display: $block;
+                        margin-bottom: $_15;
+                        border-radius: $_10;
+                        border: $_1 solid #0044AA;
+                        background-color: $dark_blue;
+                        text-decoration: none;
+                    }
                 }
             }
+        }
+    }
+
+    //Tasks pages
+    .user-dashboard.view-all-tasks {
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_1000;
+        }
+
+        .table-wrapper {
+            width: $_1000;
+
+            .task-management-heading-container {
+                .heading-one {
+                    padding: $_10 $_0 $_5;
+                }
+            }
+
+            .text-route {
+                width: $_950;
+            }
+
+            .pdf-button.container {
+                .create-pdf {
+                    width: $_200;
+                }
+            }
+
+            .table-container {
+                width: $_950;
+
+                .table {
+                    width: $_950;
+
+                    .theading {
+                        width: $_150;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.view-task {
+        margin: $_100 $auto;
+
+        .welcome-text.container {
+            font-size: $_10;
+            width: $_850;
+        }
+
+        .table-wrapper {
+            width: $_1000;
+
+            .task-management-heading-2nd-container {
+                display: $flex;
+                align-items: $alignCenter;
+                margin-bottom: $_20;
+
+                .to-multi-view-mode {
+                    display: $flex;
+                    font-size: 16px;
+                    padding: $_10 $_0;
+                    align-items: $alignCenter;
+                }
+
+                .heading-one {
+                    display: $block;
+                    margin: $_0 $auto;
+                    padding: $_10 $_0;
+                    font-size: 18px;
+                    width: $_280;
+                }
+            }
+
+            .text-route {
+                position: relative;
+                display: $flex;
+                align-items: $alignCenter;
+                width: $_950;
+                height: $_40;
+
+                .heading-two {
+                    position: absolute;
+                    left: $_0;
+                    width: $_150;
+                    margin: $_0 $auto;
+                }
+
+                .pdf-button.container {
+                    position: absolute;
+                    display: $block;
+                    right: $_0;
+                    width: $_150;
+                    margin: $_10 $auto;
+
+                    .create-pdf {
+                        font-size: 12px;
+                        margin: $_0 $auto;
+                        width: $_150;
+                    }
+                }
+            }
+
+            .table-container {
+                width: $_950;
+
+                .table {
+                    width: $_950;
+
+                    .theading {
+                        width: $_100;
+                    }
+                }
+            }
+        }
+    }
+
+    .user-dashboard.create-task,
+    .user-dashboard.update-task,
+    .user-dashboard.delete-task,
+
+    //user profile pages
+    .view-account-profile,
+    .update-account-profile {
+        width: $_600;
+
+        .task-container {
+            width: $_600;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .form {
+                width: $_450;
+
+                //form pages
+                .form-field-row {
+
+                    .task-name-label,
+                    .task-description-label,
+                    .task-status-label,
+                    .task-todays-date-label,
+                    .task-due-date-label {
+                        width: $_100;
+                        margin: $_10 $_0 $_0;
+                    }
+
+                    .task-name-input,
+                    .task-description-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-status-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-todays-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+
+                    .task-due-date-input {
+                        width: 280px;
+                        margin: $_10 $_0 $_0 $_5;
+                        padding: $_0;
+                    }
+                }
+
+                .form-field-row:nth-child(11) {
+                    .btn-container {
+                        display: $block;
+                        height: $_15;
+                        width: $_150;
+                        border-radius: $_10;
+
+                        .revert-submit {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .submit-btn.create {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .task-container-account {
+            width: $_600;
+
+            .heading.container {
+                width: $_350;
+            }
+
+            .data-container {
+                width: 420px;
+
+                .data-item {
+                    padding: $_0 $_0;
+
+                    .username-label,
+                    .bio-label,
+                    .email-label,
+                    .phonenumber-label {
+                        width: $_100;
+                    }
+
+                    .username {
+                        width: $_300;
+                    }
+
+                    .bio {
+                        width: $_300;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email,
+                    .phonenumber {
+                        width: $_300;
+                    }
+                }
+
+                .data-item:nth-child(1),
+                .data-item:nth-child(3),
+                .data-item:nth-child(5),
+                .data-item:nth-child(7) {
+                    width: $_100;
+                }
+
+                .data-item:nth-child(2) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(4) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(6),
+                .data-item:nth-child(8) {
+                    width: 320px;
+                }
+
+                .data-item:nth-child(9) {
+                    width: 410px;
+                    margin: $_0 $auto;
+                    justify-content: center;
+
+                    a {
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        //profile update page
+        .task-container-account-update {
+            margin: $_10 $auto;
+            width: $_500;
+
+            .heading.container {
+                margin: $_10 $auto;
+                font-size: $_20;
+                color: $white;
+                text-align: $alignCenter;
+            }
+
+            .form {
+                width: 420px;
+
+                .form-field-row {
+
+                    .username-label,
+                    .biotext-label,
+                    .email-label,
+                    .phonenumber-label,
+                    .password-label {
+                        width: $_100;
+                        font-size: 16px;
+                    }
+
+                    .username-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .biotext-input {
+                        width: 300px;
+                        font-size: 16px;
+                        overflow-y: auto;
+                        white-space: wrap;
+                        height: $_100;
+                        resize: none;
+                        background-color: $dark_blue;
+                        color: $white;
+                    }
+
+                    .email-input,
+                    .phonenumber-input,
+                    .password-input {
+                        width: 300px;
+                        font-size: 16px;
+                    }
+
+                    .username-input::placeholder,
+                    .biotext-input::placeholder,
+                    .email-input::placeholder,
+                    .phonenumber-input::placeholder,
+                    .password-input::placeholder {
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(2) {
+                    margin: $_0 $_0 $_0;
+                }
+
+                .form-field-row:nth-child(10) {
+                    margin-bottom: $_10;
+                }
+
+                .form-field-row:nth-child(11) {
+                    display: $flex;
+                    width: 350px;
+
+                    .btn {
+                        width: $_150;
+
+                        .back-to-profile-view-mode,
+                        .update-route {
+                            font-size: $_15;
+                            margin-bottom: $_0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notfound {
+        width: $_300;
+
+        .wrapper {
+            font-size: $_15;
         }
     }
 }

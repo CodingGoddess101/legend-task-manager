@@ -1,12 +1,18 @@
 import { ReactNode } from "react";
 
 interface Props {
-    text?: String;
-    id?: String;
-    to?:String;
-    htmlFor?:String;
-    class_name?: String;
-    linkText?:String;
+    id?: string;
+    class_name?: string;
+    text?: string;
+    to?:string;
+    key?: number;
+    name?:string;
+    onChange?:()=> void;
+    value?: string | number;
+    onClick?:()=> void;
+    linkText?:string;
+    htmlFor?:string;
+    required?:boolean,
     children?: ReactNode;
 }
 
