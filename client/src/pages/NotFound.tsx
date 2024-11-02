@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import UI from "../components/ui-components";
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "Error";
+  }, []);
   return (
     <UI.Section class_name={"notfound"}>
       <UI.Section class_name={"wrapper"}>
