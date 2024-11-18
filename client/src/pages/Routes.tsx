@@ -1,36 +1,38 @@
 //all files to be rendered from a single component
 import Home from "./Home.tsx";
 import Login from "./Login.tsx";
+import FindAccount from "./AccountRecovery/FindAccount.tsx";
 import Register from "./Register.tsx";
 import NotFound from "./NotFound.tsx";
 
 //Authenticated Pages
 //Task Pages
-import Dashboard_View_All_Tasks from "./Dashboard_View_All_Tasks.tsx";
-import Dashboard_View_Single_Task from "./Tasks/Dashboard_View_Single_Task.tsx";
-import Dashboard_Create_New_Task from "./Tasks/Dashboard_Create_New_Task.tsx";
-import Dashboard_Update_Single_Task from "./Tasks/Dashboard_Update_Single_Task.tsx";
+import DashboardViewAllTasks from "./DashboardViewAllTasks.tsx";
+import DashboardViewSingleTask from "./Tasks/DashboardViewSingleTask.tsx";
+import DashboardCreateNewTask from "./Tasks/DashboardCreateNewTask.tsx";
+import DashboardUpdateSingleTask from "./Tasks/DashboardUpdateSingleTask.tsx";
 
 //User Profile Pages
-import Dashboard_View_Account_Profile from "./UserProfiles/Dashboard_View_Account_Profile.tsx";
-import Dashboard_Delete_Account_Profile from "./UserProfiles/Dashboard_Delete_Account_Profile.tsx";
-import Dashboard_Update_Account_Profile from "./UserProfiles/Dashboard_Update_Account_Profile.tsx";
+import DashboardViewAccountProfile from "./UserProfiles/DashboardViewAccountProfile.tsx";
+import DashboardUpdateAccountProfile from "./UserProfiles/DashboardUpdateAccountProfile.tsx";
+import AccountPasswordReset from "./AccountRecovery/AccountPasswordReset.tsx";
 //profile created upon registration
 //404 not found
 const AppPages = {
   Home,
   Register,
   Login,
+  FindAccount,
 
-  Dashboard_View_All_Tasks,
+  DashboardViewAllTasks,
 
-  Dashboard_Create_New_Task,
-  Dashboard_View_Single_Task,
-  Dashboard_Update_Single_Task,
+  DashboardCreateNewTask,
+  DashboardViewSingleTask,
+  DashboardUpdateSingleTask,
 
-  Dashboard_View_Account_Profile,
-  Dashboard_Update_Account_Profile,
-  Dashboard_Delete_Account_Profile,
+  DashboardViewAccountProfile,
+  DashboardUpdateAccountProfile,
+  AccountPasswordReset,
   NotFound,
 };
 export default AppPages;

@@ -7,7 +7,7 @@ interface Props {
     to?:string;
     key?: number;
     name?:string;
-    onChange?:()=> void;
+    onChange?:(e:React.ChangeEvent<HTMLSelectElement>)=> void;
     value?: string | number;
     onClick?:()=> void;
     linkText?:string;

@@ -1,21 +1,9 @@
-import Props from "./ComponentProps";
-
-interface PropsDateFormatter extends Props {
-  locale?: string;
-}
-const DateFormat = ({ class_name, children, locale }: PropsDateFormatter) => {
-  const newDateValue =
-    typeof children === "string" || typeof children === "number"
-      ? new Date(children)
-      : "Not Applicable";
-
-  const formattedDate = new Date(newDateValue).toLocaleDateString(locale, {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  });
-
-  return <span className={`${class_name}`}> {formattedDate}</span>;
+const formatInputDate = (date: any) => {
+  const date_ = new Date(date);
+  const year = date_.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 };
 
-export default DateFormat;
+export default formatInputDate;

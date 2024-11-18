@@ -285,6 +285,14 @@ a:hover,
 }
 .login .wrapper #form .form-field-row:nth-child(3) {
   margin-top: 10px;
+  position: relative;
+  display: flex;
+}
+.login .wrapper #form .form-field-row:nth-child(3) .forgot-password {
+  position: absolute;
+  right: 10px;
+  color: #ffffff;
+  font-size: 14px;
 }
 .login .wrapper #form .form-field-row:nth-child(4) {
   margin-bottom: 20px;
@@ -296,12 +304,12 @@ a:hover,
   height: 30px;
 }
 .login .wrapper #form .form-field-row:nth-child(5) .submit-btn {
-  margin: 0px 0px 30px;
+  margin: 0px auto 30px;
   padding: 0px;
 }
 .login .wrapper #form .form-field-row:nth-child(6) {
   display: block;
-  margin: 0px;
+  margin: 0px auto;
 }
 .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
   margin: 20px auto 10px;
@@ -317,6 +325,199 @@ a:hover,
   border-radius: 10px;
   border: 1px solid #0044aa;
   background-color: #000066;
+}
+
+.account-recovery {
+  height: auto;
+  background-color: #000066;
+  margin: 100px auto 60px;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 7px #0044aa;
+}
+.account-recovery .wrapper {
+  display: block;
+  margin: 50px auto;
+  padding: 2px 0px;
+}
+.account-recovery .wrapper .heading.container {
+  margin: 0px auto;
+}
+.account-recovery .wrapper .heading.container .heading-one {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.account-recovery .wrapper .heading.container .paragraph {
+  margin-top: 2px;
+  margin-bottom: 15px;
+  padding: 0px;
+}
+.account-recovery .wrapper #form {
+  margin: 0px auto;
+}
+.account-recovery .wrapper #form .form-field-row .username,
+.account-recovery .wrapper #form .form-field-row .email {
+  height: inherit;
+  display: block;
+  height: 20px;
+}
+.account-recovery .wrapper #form .form-field-row .username::after,
+.account-recovery .wrapper #form .form-field-row .email::after {
+  content: ":";
+}
+.account-recovery .wrapper #form .form-field-row .username-input,
+.account-recovery .wrapper #form .form-field-row .email-input {
+  background-color: #000066;
+  border: 1px solid #0044aa;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.account-recovery .wrapper #form .form-field-row .username-input::-moz-placeholder, .account-recovery .wrapper #form .form-field-row .email-input::-moz-placeholder {
+  color: #ffffff;
+}
+.account-recovery .wrapper #form .form-field-row .username-input::placeholder,
+.account-recovery .wrapper #form .form-field-row .email-input::placeholder {
+  color: #ffffff;
+}
+.account-recovery .wrapper #form .form-field-row .submit-btn {
+  display: block;
+  margin: 0px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #0044aa;
+  background-color: #000066;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(3) {
+  margin-top: 10px;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(4) {
+  margin-bottom: 20px;
+  height: 30px;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(5) {
+  display: block;
+  margin: 0px auto;
+  height: 30px;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(5) a {
+  padding: 3px 0px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  margin: 0px auto 15px;
+  border-radius: 10px;
+  border: 1px solid #0044aa;
+  background-color: #000066;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(6) {
+  display: block;
+  margin: 0px auto;
+}
+.account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+  padding: 3px 0px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  margin: 0px auto 15px;
+  border-radius: 10px;
+  border: 1px solid #0044aa;
+  background-color: #000066;
+}
+
+.password-reset {
+  height: auto;
+  background-color: #000066;
+  margin: 100px auto 60px;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 7px #0044aa;
+}
+.password-reset .wrapper {
+  display: block;
+  margin: 50px auto;
+  padding: 2px 0px;
+}
+.password-reset .wrapper .heading.container {
+  margin: 0px auto;
+}
+.password-reset .wrapper .heading.container .heading-one {
+  font-size: 20px;
+  margin: 10px 0px 20px;
+}
+.password-reset .wrapper .heading.container .paragraph {
+  margin-top: 2px;
+  margin-bottom: 15px;
+  padding: 0px;
+}
+.password-reset .wrapper #form {
+  margin: 0px auto;
+}
+.password-reset .wrapper #form .form-field-row .password {
+  height: inherit;
+  display: block;
+  height: 20px;
+}
+.password-reset .wrapper #form .form-field-row .password::after {
+  content: ":";
+}
+.password-reset .wrapper #form .form-field-row .password-input {
+  background-color: #000066;
+  border: 1px solid #0044aa;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+  color: #ffffff;
+}
+.password-reset .wrapper #form .form-field-row .password-input::placeholder {
+  color: #ffffff;
+}
+.password-reset .wrapper #form .form-field-row .submit-btn {
+  display: block;
+  margin: 15px 0px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #0044aa;
+  background-color: #000066;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(3) {
+  margin-top: 10px;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(4) {
+  margin-bottom: 20px;
+  height: 30px;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(5) {
+  display: block;
+  margin: 0px;
+  height: 30px;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(5) a {
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  margin: 0px auto 15px;
+  border-radius: 10px;
+  border: 1px solid #0044aa;
+  background-color: #000066;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(6) {
+  display: block;
+  margin: 0px;
+}
+.password-reset .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+  margin: 0px 0px 30px;
+  padding: 0px;
 }
 
 .register {
@@ -588,19 +789,19 @@ a:hover,
 .user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .btn.view {
   color: #ffffff;
 }
-.user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row .row.data .btn-views,
-.user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .btn-views {
-  padding: 0px 5px;
-}
-.user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row .row.data .btn-views .edit,
-.user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row .row.data .btn-views .delete,
-.user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .btn-views .edit,
-.user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .btn-views .delete {
+.user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row .row.data .btn-view,
+.user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row .row.data .form .delete,
+.user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .btn-view,
+.user-dashboard.view-task .table-wrapper .table-container .table .table-body .row .row.data .form .delete {
+  background-color: #000066;
+  border: none;
+  text-decoration: underline;
   color: #ffffff;
+  cursor: pointer;
 }
 .user-dashboard.view-all-tasks .table-wrapper .table-container .table .table-body .row:nth-child(2),
 .user-dashboard.view-task .table-wrapper .table-container .table .table-body .row:nth-child(2) {
-  min-width: 150px;
+  min-width: 100px;
   min-width: 350px;
 }
 
@@ -935,6 +1136,24 @@ a:hover,
   height: 20px;
   padding: 4px;
   border: 2px solid #0044aa;
+  color: #ffffff;
+}
+.user-dashboard.create-task .task-container-account .data-container .data-item .bio,
+.user-dashboard.update-task .task-container-account .data-container .data-item .bio,
+.user-dashboard.delete-task .task-container-account .data-container .data-item .bio,
+.view-account-profile .task-container-account .data-container .data-item .bio,
+.update-account-profile .task-container-account .data-container .data-item .bio {
+  overflow-x: hidden;
+}
+.user-dashboard.create-task .task-container-account .data-container .data-item .email,
+.user-dashboard.update-task .task-container-account .data-container .data-item .email,
+.user-dashboard.delete-task .task-container-account .data-container .data-item .email,
+.view-account-profile .task-container-account .data-container .data-item .email,
+.update-account-profile .task-container-account .data-container .data-item .email {
+  white-space: wrap;
+  overflow-y: auto;
+  height: auto;
+  scrollbar-color: #000066 #0044aa;
 }
 .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(2),
 .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(2),
@@ -969,20 +1188,62 @@ a:hover,
 .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-.user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-.user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-.view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-.update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-  padding: 2px 5px;
-  display: block;
+.user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+.user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+.user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+.view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+.update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+}
+.user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+.user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+.user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+.view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+.update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 5px;
   border: 2px solid #0044aa;
   border-radius: 10px;
   color: #ffffff;
   text-decoration: none;
-  margin: 5px;
-  width: auto;
+  margin: 5px auto;
+  background-color: #000066;
+}
+.user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form,
+.user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form,
+.user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form,
+.view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form,
+.update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form {
+  display: block;
+}
+.user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+.user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+.user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+.view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+.update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px 5px;
+  border: 2px solid #0044aa;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px auto;
+  background-color: #000066;
 }
 .user-dashboard.create-task .task-container-account-update,
 .user-dashboard.update-task .task-container-account-update,
@@ -1105,6 +1366,7 @@ a:hover,
   margin: 5px 0px 0px;
   border-radius: 10px;
   height: 20px;
+  color: #ffffff;
   padding: 4px;
   border: 2px solid #0044aa;
 }
@@ -1138,36 +1400,36 @@ a:hover,
 .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
   color: #ffffff;
 }
-.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-.view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-.update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+.view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+.update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
   display: flex;
   flex-wrap: wrap;
   height: auto;
   margin: 0px auto;
   justify-items: center;
 }
-.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-.view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-.update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
+.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn,
+.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn,
+.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn,
+.view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn,
+.update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn {
   display: block;
   margin: 0px auto;
   text-align: center;
 }
-.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-.view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-.view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-.update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-.update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
+.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+.user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+.user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+.user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+.view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+.view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+.update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+.update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
   display: block;
   border-radius: 10px;
   display: block;
@@ -1317,42 +1579,108 @@ a:hover,
     width: 250px;
   }
   .login {
-    width: 250px;
+    width: 280px;
   }
   .login .wrapper {
-    width: 230px;
+    width: 280px;
   }
   .login .wrapper .heading.container {
-    width: 230px;
+    width: 250px;
   }
   .login .wrapper .heading.container .paragraph {
     font-size: 12px;
   }
   .login .wrapper #form {
-    width: 230px;
+    width: 250px;
   }
   .login .wrapper #form .form-field-row {
-    width: 200px;
-  }
-  .login .wrapper #form .form-field-row .email,
-  .login .wrapper #form .form-field-row .password {
-    width: 200px;
+    width: 250px;
   }
   .login .wrapper #form .form-field-row .email-input,
   .login .wrapper #form .form-field-row .password-input {
     font-size: 12px;
-    width: 200px;
+    width: 230px;
   }
   .login .wrapper #form .form-field-row:nth-child(5) .submit-btn {
-    width: 212px;
+    width: 230px;
     font-size: 14px;
   }
   .login .wrapper #form .form-field-row:nth-child(6) {
-    width: 212px;
+    width: 230px;
     font-size: 14px;
   }
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
+  }
+  .account-recovery {
+    width: 250px;
+  }
+  .account-recovery .wrapper {
+    width: 230px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 230px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 230px;
+  }
+  .account-recovery .wrapper #form .form-field-row {
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    font-size: 14px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 192px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 192px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
   }
   .register {
     width: 250px;
@@ -1688,14 +2016,14 @@ a:hover,
   .user-dashboard.delete-task .task-container-account .heading.container,
   .view-account-profile .task-container-account .heading.container,
   .update-account-profile .task-container-account .heading.container {
-    width: 230px;
+    width: 200px;
   }
   .user-dashboard.create-task .task-container-account .data-container,
   .user-dashboard.update-task .task-container-account .data-container,
   .user-dashboard.delete-task .task-container-account .data-container,
   .view-account-profile .task-container-account .data-container,
   .update-account-profile .task-container-account .data-container {
-    width: 230px;
+    width: 200px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item,
   .user-dashboard.update-task .task-container-account .data-container .data-item,
@@ -1726,22 +2054,23 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
   .user-dashboard.delete-task .task-container-account .data-container .data-item .username,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
-    width: 200px;
-    font-size: 15px;
+    width: 180px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.delete-task .task-container-account .data-container .data-item .bio,
   .view-account-profile .task-container-account .data-container .data-item .bio,
   .update-account-profile .task-container-account .data-container .data-item .bio {
-    width: 200px;
+    width: 180px;
+    overflow-x: hidden;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -1751,37 +2080,43 @@ a:hover,
     font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .email,
-  .user-dashboard.create-task .task-container-account .data-container .data-item .phonenumber,
   .user-dashboard.update-task .task-container-account .data-container .data-item .email,
-  .user-dashboard.update-task .task-container-account .data-container .data-item .phonenumber,
   .user-dashboard.delete-task .task-container-account .data-container .data-item .email,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item .phonenumber,
   .view-account-profile .task-container-account .data-container .data-item .email,
-  .view-account-profile .task-container-account .data-container .data-item .phonenumber,
-  .update-account-profile .task-container-account .data-container .data-item .email,
-  .update-account-profile .task-container-account .data-container .data-item .phonenumber {
-    width: 200px;
-    font-size: 15px;
-  }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9),
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9),
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
-    display: block;
-    width: 200px;
-    text-align: center;
-    margin: 0px auto;
-  }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    margin: 10px auto;
+  .update-account-profile .task-container-account .data-container .data-item .email {
     width: 180px;
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item .phonenumber,
+  .user-dashboard.update-task .task-container-account .data-container .data-item .phonenumber,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item .phonenumber,
+  .view-account-profile .task-container-account .data-container .data-item .phonenumber,
+  .update-account-profile .task-container-account .data-container .data-item .phonenumber {
+    width: 180px;
+    font-size: 14px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
+    width: 200px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    width: 180px;
+    font-size: 13px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    width: 193.2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -1834,7 +2169,8 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    word-wrap: break-word;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -1842,7 +2178,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 220px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -1850,7 +2186,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 220px;
-    font-size: 14px;
+    font-size: 13px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -1874,7 +2210,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 220px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
     font-size: 12px;
@@ -1913,41 +2249,34 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 220px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
-    width: 200px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
-    margin: 10px auto;
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    width: 217px;
+    margin: 15px auto 5px;
     font-size: 14px;
     margin-bottom: 0px;
+  }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    width: 220.2px;
+    margin: 15px auto 5px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 280px;
@@ -2055,10 +2384,6 @@ a:hover,
   .login .wrapper #form {
     width: 250px;
   }
-  .login .wrapper #form .form-field-row .email,
-  .login .wrapper #form .form-field-row .password {
-    width: 200px;
-  }
   .login .wrapper #form .form-field-row .email-input,
   .login .wrapper #form .form-field-row .password-input {
     font-size: 12px;
@@ -2074,6 +2399,73 @@ a:hover,
   }
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
+  }
+  .account-recovery {
+    width: 350px;
+  }
+  .account-recovery .wrapper {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    font-size: 14px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 212px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 212px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
   }
   .register {
     width: 350px;
@@ -2431,7 +2823,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
@@ -2439,7 +2831,7 @@ a:hover,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
     width: 230px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
@@ -2466,27 +2858,30 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber {
     width: 230px;
-    font-size: 15px;
+    font-size: 14px;
   }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9),
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9),
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
-    width: 250px;
-    justify-content: center;
-    display: block;
-    text-align: center;
-  }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    margin: 10px auto;
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
     width: 200px;
-    font-size: 12px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    width: 180px;
+    font-size: 13px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    width: 193.2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -2539,7 +2934,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -2547,7 +2942,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 250px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -2555,13 +2950,12 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 250px;
-    font-size: 16px;
+    font-size: 13px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
     resize: none;
     background-color: #000066;
-    color: #ffffff;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input,
@@ -2579,10 +2973,10 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 250px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
@@ -2609,7 +3003,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(2),
   .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(2),
@@ -2618,41 +3012,34 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 250px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
-    width: 230px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    width: 227px;
     margin: 10px auto;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 0px;
+  }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    width: 230.2px;
+    margin: 10px auto;
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 300px;
@@ -2775,10 +3162,6 @@ a:hover,
   .login .wrapper #form .form-field-row {
     width: 250px;
   }
-  .login .wrapper #form .form-field-row .email,
-  .login .wrapper #form .form-field-row .password {
-    width: 200px;
-  }
   .login .wrapper #form .form-field-row .email-input,
   .login .wrapper #form .form-field-row .password-input {
     font-size: 12px;
@@ -2794,6 +3177,76 @@ a:hover,
   }
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
+  }
+  .account-recovery {
+    width: 350px;
+  }
+  .account-recovery .wrapper {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    font-size: 14px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 212px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 212px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
   }
   .register {
     width: 350px;
@@ -3123,6 +3576,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
@@ -3130,6 +3584,7 @@ a:hover,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
     width: 230px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
@@ -3143,6 +3598,7 @@ a:hover,
     resize: none;
     background-color: #000066;
     color: #ffffff;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .email,
   .user-dashboard.create-task .task-container-account .data-container .data-item .phonenumber,
@@ -3155,26 +3611,30 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber {
     width: 230px;
+    font-size: 14px;
   }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9),
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9),
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9),
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
-    width: 250px;
-    justify-content: center;
-    display: block;
-    text-align: center;
-  }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    margin: 10px auto;
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
     width: 200px;
-    font-size: 12px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    width: 180px;
+    font-size: 13px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    width: 193.2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -3227,7 +3687,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -3235,7 +3695,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 280px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -3243,7 +3703,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 280px;
-    font-size: 16px;
+    font-size: 14px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -3267,10 +3727,10 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 280px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
@@ -3297,7 +3757,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(2),
   .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(2),
@@ -3306,41 +3766,34 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 280px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
-    width: 250px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    width: 227px;
     margin: 10px auto;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 0px;
+  }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    width: 230.2px;
+    margin: 10px auto;
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 300px;
@@ -3479,6 +3932,76 @@ a:hover,
   }
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
+  }
+  .account-recovery {
+    width: 350px;
+  }
+  .account-recovery .wrapper {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    font-size: 14px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 212px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 212px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
   }
   .register {
     width: 350px;
@@ -3805,6 +4328,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
@@ -3812,6 +4336,7 @@ a:hover,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
@@ -3825,6 +4350,7 @@ a:hover,
     resize: none;
     background-color: #000066;
     color: #ffffff;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .email,
   .user-dashboard.create-task .task-container-account .data-container .data-item .phonenumber,
@@ -3837,6 +4363,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(1),
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(3),
@@ -3891,17 +4418,30 @@ a:hover,
   .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9),
   .view-account-profile .task-container-account .data-container .data-item:nth-child(9),
   .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
-    width: 410px;
     margin: 0px auto;
-    justify-content: center;
   }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    font-size: 14px;
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
+    width: 410px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    width: 300px;
+    font-size: 13px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    width: 313.2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -3954,7 +4494,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -3962,7 +4502,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -3970,7 +4510,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 14px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -3994,10 +4534,10 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
@@ -4024,7 +4564,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(2),
   .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(2),
@@ -4033,40 +4573,32 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 350px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    font-size: 14px;
     width: 150px;
+    margin: 15px auto 5px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
-    font-size: 15px;
-    margin-bottom: 0px;
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    font-size: 12px;
+    width: 153.2px;
+    margin: 15px auto 5px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 300px;
@@ -4205,6 +4737,76 @@ a:hover,
   }
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
+  }
+  .account-recovery {
+    width: 350px;
+  }
+  .account-recovery .wrapper {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    font-size: 14px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 212px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 212px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
   }
   .register {
     width: 350px;
@@ -4531,6 +5133,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
@@ -4538,6 +5141,7 @@ a:hover,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
@@ -4551,6 +5155,7 @@ a:hover,
     resize: none;
     background-color: #000066;
     color: #ffffff;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .email,
   .user-dashboard.create-task .task-container-account .data-container .data-item .phonenumber,
@@ -4563,6 +5168,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(1),
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(3),
@@ -4619,15 +5225,29 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item:nth-child(9) {
     width: 410px;
     margin: 0px auto;
-    justify-content: center;
   }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    font-size: 14px;
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
+    width: 410px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    width: 300px;
+    font-size: 13px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    width: 313.2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -4680,7 +5300,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -4688,7 +5308,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -4696,7 +5316,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 13px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -4720,37 +5340,47 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 300px;
-    font-size: 16px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
     font-size: 14px;
   }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder {
+    font-size: 12px;
+  }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::placeholder,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::placeholder,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::placeholder,
+  .view-account-profile .task-container-account-update .form .form-field-row .username-input::placeholder,
+  .update-account-profile .task-container-account-update .form .form-field-row .username-input::placeholder {
+    font-size: 12px;
+  }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder {
+    font-size: 12px;
+  }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
+  .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::placeholder,
+  .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::placeholder {
+    font-size: 12px;
+  }
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::placeholder,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::placeholder,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::placeholder,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::placeholder,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::placeholder,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
   .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::placeholder,
   .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::placeholder,
-  .view-account-profile .task-container-account-update .form .form-field-row .username-input::placeholder,
-  .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::placeholder,
   .view-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .view-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder,
-  .update-account-profile .task-container-account-update .form .form-field-row .username-input::placeholder,
-  .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(2),
   .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(2),
@@ -4759,40 +5389,32 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 350px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    font-size: 14px;
     width: 150px;
+    margin: 15px auto 5px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
-    font-size: 15px;
-    margin-bottom: 0px;
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    font-size: 12px;
+    width: 153.2px;
+    margin: 15px auto 5px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 300px;
@@ -4933,6 +5555,80 @@ a:hover,
   .login .wrapper #form .form-field-row:nth-child(6) .paragraph {
     font-size: 12px;
   }
+  .account-recovery {
+    width: 350px;
+  }
+  .account-recovery .wrapper {
+    width: 300px;
+  }
+  .account-recovery .wrapper .heading.container {
+    width: 250px;
+  }
+  .account-recovery .wrapper .heading.container .paragraph {
+    font-size: 12px;
+  }
+  .account-recovery .wrapper #form {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username,
+  .account-recovery .wrapper #form .form-field-row .email {
+    width: 200px;
+    font-size: 14px;
+  }
+  .account-recovery .wrapper #form .form-field-row .username-input,
+  .account-recovery .wrapper #form .form-field-row .email-input {
+    font-size: 12px;
+    width: 200px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(4) {
+    width: 212px;
+    font-size: 14px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(5) .back-to-login {
+    width: 212px;
+    font-size: 13px;
+  }
+  .account-recovery .wrapper #form .form-field-row:nth-child(6) .submit-btn {
+    width: 212px;
+    font-size: 11.5px;
+  }
+  .password-reset {
+    width: 280px;
+  }
+  .password-reset .wrapper {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container {
+    width: 250px;
+  }
+  .password-reset .wrapper .heading.container .paragraph {
+    width: 230px;
+  }
+  .password-reset .wrapper #form {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row {
+    width: 250px;
+  }
+  .password-reset .wrapper #form .form-field-row .password {
+    font-size: 14px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input {
+    width: 238px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .password-input::placeholder {
+    font-size: 12px;
+  }
+  .password-reset .wrapper #form .form-field-row .submit-btn {
+    font-size: 12px;
+    width: 250px;
+  }
   .register {
     width: 350px;
   }
@@ -5258,6 +5954,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email-label,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber-label {
     width: 100px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .username,
   .user-dashboard.update-task .task-container-account .data-container .data-item .username,
@@ -5265,6 +5962,7 @@ a:hover,
   .view-account-profile .task-container-account .data-container .data-item .username,
   .update-account-profile .task-container-account .data-container .data-item .username {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item .bio,
   .user-dashboard.update-task .task-container-account .data-container .data-item .bio,
@@ -5290,6 +5988,7 @@ a:hover,
   .update-account-profile .task-container-account .data-container .data-item .email,
   .update-account-profile .task-container-account .data-container .data-item .phonenumber {
     width: 300px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(1),
   .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(3),
@@ -5348,13 +6047,32 @@ a:hover,
     margin: 0px auto;
     justify-content: center;
   }
-  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) a,
-  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) a,
-  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) a {
-    display: block;
-    font-size: 14px;
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn {
+    min-width: 100px;
+    max-width: 230px;
+    margin: 0px 2px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn a {
+    font-size: 13px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .user-dashboard.create-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.update-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .user-dashboard.delete-task .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .view-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile,
+  .update-account-profile .task-container-account .data-container .data-item:nth-child(9) .btn .form .delete-account-profile {
+    font-size: 11px;
+    margin-left: 2px;
+    margin-right: 2px;
   }
   .user-dashboard.create-task .task-container-account-update,
   .user-dashboard.update-task .task-container-account-update,
@@ -5407,7 +6125,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-label,
   .update-account-profile .task-container-account-update .form .form-field-row .password-label {
     width: 100px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input,
@@ -5415,7 +6133,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .username-input,
   .update-account-profile .task-container-account-update .form .form-field-row .username-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input,
   .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input,
@@ -5423,7 +6141,7 @@ a:hover,
   .view-account-profile .task-container-account-update .form .form-field-row .biotext-input,
   .update-account-profile .task-container-account-update .form .form-field-row .biotext-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 14px;
     overflow-y: auto;
     white-space: wrap;
     height: 100px;
@@ -5447,10 +6165,10 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input {
     width: 300px;
-    font-size: 16px;
+    font-size: 13px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.create-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.update-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .user-dashboard.delete-task .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .view-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .username-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .biotext-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .email-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::-moz-placeholder, .update-account-profile .task-container-account-update .form .form-field-row .password-input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .username-input::placeholder,
   .user-dashboard.create-task .task-container-account-update .form .form-field-row .biotext-input::placeholder,
@@ -5477,7 +6195,7 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row .email-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .phonenumber-input::placeholder,
   .update-account-profile .task-container-account-update .form .form-field-row .password-input::placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(2),
   .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(2),
@@ -5486,40 +6204,32 @@ a:hover,
   .update-account-profile .task-container-account-update .form .form-field-row:nth-child(2) {
     margin: 0px 0px 0px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(10),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(10),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(10) {
-    margin-bottom: 10px;
-  }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11),
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11),
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13),
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13),
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) {
     display: flex;
     width: 350px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn {
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .back-to-profile-view-mode {
+    font-size: 14px;
     width: 150px;
+    margin: 15px auto 5px;
   }
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .back-to-profile-view-mode,
-  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(11) .btn .update-route {
-    font-size: 15px;
-    margin-bottom: 0px;
+  .user-dashboard.create-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.update-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .user-dashboard.delete-task .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .view-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route,
+  .update-account-profile .task-container-account-update .form .form-field-row:nth-child(13) .btn .update-route {
+    font-size: 12px;
+    width: 153.2px;
+    margin: 15px auto 5px;
+    padding: 2px 0px;
   }
   .notfound {
     width: 300px;
