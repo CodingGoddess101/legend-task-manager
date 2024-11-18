@@ -7,7 +7,7 @@ is my(CodingGoddess101) work; The credit and recognition is of my property.
 
 Legend systems has the right to view the app I created and determine whether my capabilities as a 10x Software Developer specialized in the Web development(MERN Stack), are of great value to them.
 
-Designed, Developed and git flow committed by CodingGoddes101.
+Designed, Developed and Git Flow committed by CodingGoddes101.
 
 
 Please ensure the follwong libraries and frameworks are installed so you may smoothly run the app on your machine.
