@@ -7,17 +7,17 @@ const Register = () => {
   }, []);
   return (
     <>
-      <UI.Header_Standard />
+      <UI.HeaderStandard />
       <UI.Section class_name={"register"}>
         <UI.Section class_name={"wrapper"}>
           <UI.Section class_name={"heading container"}>
-            <UI.Heading_One class_name={"heading-one"} text={"Registration"} />
+            <UI.HeadingOne class_name={"heading-one"} text={"Registration"} />
             <UI.Paragraph
               class_name={"paragraph"}
               text={"Enter your credentials below to create your account"}
             />
           </UI.Section>
-          <form id="form" autoComplete="on" action="/register" method="POST">
+          <form id="form" autoComplete="off" action="/register" method="POST">
             <UI.Section class_name={"form-field-row"}>
               <UI.Label
                 htmlFor={"username"}
@@ -35,7 +35,6 @@ const Register = () => {
                 placeholder="Enter your name"
                 name="username"
                 required
-                autoComplete="false"
               />
             </UI.Section>
             <UI.Section class_name={"form-field-row"}>
@@ -71,7 +70,6 @@ const Register = () => {
                 placeholder="Example: user@company.co.za"
                 name="email"
                 required
-                autoComplete="false"
               />
             </UI.Section>
             <UI.Section class_name={"form-field-row"}>
@@ -91,7 +89,6 @@ const Register = () => {
                 placeholder="Enter your phone number"
                 name="phonenumber"
                 required
-                autoComplete="false"
               />
             </UI.Section>
             <UI.Section class_name={"form-field-row"}>

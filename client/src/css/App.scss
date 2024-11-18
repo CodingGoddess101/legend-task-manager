@@ -378,7 +378,15 @@ a:hover,
 
             .form-field-row:nth-child(3) {
                 margin-top: $_10;
+                position: relative;
+                display: flex;
 
+                .forgot-password {
+                    position: absolute;
+                    right: 10px;
+                    color: $white;
+                    font-size: 14px;
+                }
             }
 
             .form-field-row:nth-child(4) {
@@ -392,14 +400,14 @@ a:hover,
                 height: $_30;
 
                 .submit-btn {
-                    margin: $_0 $_0 $_30;
+                    margin: $_0 $auto $_30;
                     padding: $_0;
                 }
             }
 
             .form-field-row:nth-child(6) {
                 display: $block;
-                margin: $_0;
+                margin: $_0 $auto;
 
                 .paragraph {
                     margin: $_20 $auto $_10;
@@ -416,6 +424,238 @@ a:hover,
                     border-radius: $_10;
                     border: $_1 $solid $royal_blue;
                     background-color: $dark_blue;
+                }
+            }
+        }
+    }
+}
+
+.account-recovery {
+    height: $auto;
+    background-color: $dark_blue;
+    margin: $_100 $auto $_60;
+    color: $white;
+    border-radius: $_10;
+    box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
+
+    .wrapper {
+        display: $block;
+        margin: $_50 $auto;
+        padding: $_2 $_0;
+
+        .heading.container {
+            margin: $_0 $auto;
+
+            .heading-one {
+                font-size: $_20;
+                margin-bottom: $_0;
+            }
+
+            .paragraph {
+                margin-top: $_2;
+                margin-bottom: $_15;
+                padding: $_0;
+            }
+        }
+
+        #form {
+            margin: $_0 $auto;
+
+            .form-field-row {
+
+                // label elements
+                .username,
+                .email {
+                    height: inherit;
+                    display: $block;
+                    height: $_20;
+                }
+
+                .username::after,
+                .email::after {
+                    content: ":";
+                }
+
+                .username-input,
+                .email-input {
+                    background-color: $dark_blue;
+                    border: $_1 $solid $royal_blue;
+                    color: $white;
+                    border-radius: $_10;
+                    padding: $_2 $_5;
+                }
+
+                .username-input::placeholder,
+                .email-input::placeholder {
+                    color: $white;
+
+                }
+
+                .submit-btn {
+                    display: $block;
+                    margin: $_0 $auto;
+                    border-radius: $_10;
+                    cursor: pointer;
+                    color: $white;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+
+            .form-field-row:nth-child(3) {
+                margin-top: $_10;
+
+            }
+
+            .form-field-row:nth-child(4) {
+                margin-bottom: $_20;
+                height: $_30;
+            }
+
+            .form-field-row:nth-child(5) {
+                display: $block;
+                margin: $_0 $auto;
+                height: $_30;
+
+                a {
+                    padding: $_3 $_0;
+                    color: $white;
+                    text-align: center;
+                    text-decoration: $none;
+                    cursor: pointer;
+                    display: $block;
+                    margin: $_0 $auto $_15;
+                    border-radius: $_10;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+
+            .form-field-row:nth-child(6) {
+                display: $block;
+                margin: $_0 $auto;
+
+                .submit-btn {
+                    padding: $_3 $_0;
+                    color: $white;
+                    text-align: center;
+                    text-decoration: $none;
+                    cursor: pointer;
+                    display: $block;
+                    margin: $_0 $auto $_15;
+                    border-radius: $_10;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+
+            }
+        }
+    }
+}
+
+.password-reset {
+    height: $auto;
+    background-color: $dark_blue;
+    margin: $_100 $auto $_60;
+    color: $white;
+    border-radius: $_10;
+    box-shadow: $_0 $_0 $_4 $_7 $royal_blue;
+
+    .wrapper {
+        display: $block;
+        margin: $_50 $auto;
+        padding: $_2 $_0;
+
+        .heading.container {
+            margin: $_0 $auto;
+
+            .heading-one {
+                font-size: $_20;
+                margin: $_10 $_0 $_20;
+            }
+
+            .paragraph {
+                margin-top: $_2;
+                margin-bottom: $_15;
+                padding: $_0;
+            }
+        }
+
+        #form {
+            margin: $_0 $auto;
+
+            .form-field-row {
+
+                // label elements
+                .password {
+                    height: inherit;
+                    display: $block;
+                    height: $_20;
+                }
+
+                .password::after {
+                    content: ":";
+                }
+
+                .password-input {
+                    background-color: $dark_blue;
+                    border: $_1 $solid $royal_blue;
+                    color: $white;
+                    border-radius: $_10;
+                    padding: $_2 $_5;
+                }
+
+                .password-input::placeholder {
+                    color: $white;
+                }
+
+                .submit-btn {
+                    display: $block;
+                    margin: $_15 $_0 $_10;
+                    border-radius: $_10;
+                    cursor: pointer;
+                    color: $white;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+
+            .form-field-row:nth-child(3) {
+                margin-top: $_10;
+
+            }
+
+            .form-field-row:nth-child(4) {
+                margin-bottom: $_20;
+                height: $_30;
+            }
+
+            .form-field-row:nth-child(5) {
+                display: $block;
+                margin: $_0;
+                height: $_30;
+
+                a {
+                    color: $white;
+                    text-align: center;
+                    text-decoration: $none;
+                    cursor: pointer;
+                    display: $block;
+                    margin: $_0 $auto $_15;
+                    border-radius: $_10;
+                    border: $_1 $solid $royal_blue;
+                    background-color: $dark_blue;
+                }
+            }
+
+            .form-field-row:nth-child(6) {
+                display: $block;
+                margin: $_0;
+
+                .submit-btn {
+                    margin: $_0 $_0 $_30;
+                    padding: $_0;
+
                 }
             }
         }
@@ -716,22 +956,21 @@ a:hover,
                                 color: $white;
                             }
 
-                            //single view page
-                            .btn-views {
-                                padding: $_0 $_5;
-
-                                .edit,
-                                .delete {
-
-                                    color: $white;
-                                }
+                            //single view page access control routes
+                            .btn-view,
+                            .form .delete {
+                                background-color: $dark_blue;
+                                border: $none;
+                                text-decoration: underline;
+                                color: $white;
+                                cursor: pointer;
                             }
                         }
 
                     }
 
                     .row:nth-child(2) {
-                        min-width: $_150;
+                        min-width: $_100;
                         min-width: $_350;
                     }
                 }
@@ -914,14 +1153,22 @@ a:hover,
                     height: $_20;
                     padding: $_4;
                     border: $_2 $solid $royal_blue;
+                    color: $white;
+                }
+
+                .bio {
+                    overflow-x: hidden;
+                }
+
+                .email {
+                    white-space: wrap;
+                    overflow-y: $auto;
+                    height: $auto;
+                    scrollbar-color: $dark_blue $royal_blue;
                 }
             }
 
-
-
-
             .data-item:nth-child(2) {
-
                 margin: $_0 $_0 $_0;
             }
 
@@ -937,16 +1184,50 @@ a:hover,
             .data-item:nth-child(9) {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
 
-                a {
-                    padding: $_2 $_5;
-                    display: block;
-                    border: $_2 $solid $royal_blue;
-                    border-radius: $_10;
-                    color: $white;
-                    text-decoration: $none;
-                    margin: $_5;
-                    width: $auto;
+                .btn {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin: $_0;
+                    cursor: pointer;
+                    justify-content: center;
+                    text-align: center;
+
+                    a {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 3px $_5;
+                        border: $_2 $solid $royal_blue;
+                        border-radius: $_10;
+                        color: $white;
+                        text-decoration: $none;
+                        margin: $_5 $auto;
+                        background-color: $dark_blue;
+                    }
+
+                    .form {
+                        display: block;
+
+                        .delete-account-profile {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            cursor: pointer;
+                            text-align: center;
+                            padding: 4px $_5;
+                            border: $_2 $solid $royal_blue;
+                            border-radius: $_10;
+                            color: $white;
+                            text-decoration: $none;
+                            margin: $_5 $auto;
+                            background-color: $dark_blue;
+                        }
+                    }
+
                 }
             }
         }
@@ -974,13 +1255,6 @@ a:hover,
             margin: $_10 $auto;
 
             .form-field-row {
-                // display: $block;
-                // height: $auto;
-                // overflow-x: $auto;
-                // white-space: $wrap;
-                // color: $white;
-                // padding: $_10 $_0;
-                // width: $auto;
 
                 .username-label,
                 .biotext-label,
@@ -1014,6 +1288,7 @@ a:hover,
                     margin: $_5 $_0 $_0;
                     border-radius: $_10;
                     height: $_20;
+                    color: $white;
                     padding: $_4;
                     border: $_2 $solid $royal_blue;
                 }
@@ -1027,7 +1302,7 @@ a:hover,
                 }
             }
 
-            .form-field-row:nth-child(11) {
+            .form-field-row:nth-child(13) {
                 display: flex;
                 flex-wrap: wrap;
                 height: auto;
@@ -1039,6 +1314,7 @@ a:hover,
                     margin: $_0 $auto;
                     text-align: center;
 
+                    //buttons for update profile 
                     .back-to-profile-view-mode,
                     .update-route {
                         display: block;
@@ -1089,9 +1365,6 @@ a:hover,
     }
 }
 
-//User Profile pages
-
-
 
 //not found page
 .notfound {
@@ -1133,7 +1406,6 @@ a:hover,
 
 //Small Mobile
 @media screen and (min-width: 300px) and (max-width: 424.9px) {
-
     .header.standard {
         .heading-two {
             width: $_200;
@@ -1251,6 +1523,53 @@ a:hover,
     }
 
     .login {
+        width: $_280;
+
+        .wrapper {
+            width: $_280;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .email-input,
+                    .password-input {
+                        font-size: 12px;
+                        width: $_230;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+
+                    .submit-btn {
+                        width: $_230;
+                        font-size: 14px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .paragraph {
+                        font-size: 12px;
+                    }
+
+                    width: $_230;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .account-recovery {
         width: $_250;
 
         .wrapper {
@@ -1270,36 +1589,76 @@ a:hover,
                 .form-field-row {
                     width: $_200;
 
-                    .email,
-                    .password {
+                    .username,
+                    .email {
+                        font-size: 14px;
                         width: $_200;
                     }
 
-                    .email-input,
-                    .password-input {
+                    .username-input,
+                    .email-input {
                         font-size: 12px;
                         width: $_200;
                     }
                 }
 
                 .form-field-row:nth-child(5) {
-                    .submit-btn {
-                        width: 212px;
-                        font-size: 14px;
+                    .back-to-login {
+                        width: 192px;
+                        font-size: 13px;
                     }
                 }
 
                 .form-field-row:nth-child(6) {
-                    width: 212px;
-
-                    .paragraph {
-                        font-size: 12px;
+                    .submit-btn {
+                        width: 192px;
+                        font-size: 11.5px;
                     }
-
-                    font-size: 14px;
                 }
             }
         }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
+                }
+            }
+        }
+
     }
 
     .register {
@@ -1624,11 +1983,11 @@ a:hover,
             width: $_250;
 
             .heading.container {
-                width: $_230;
+                width: $_200;
             }
 
             .data-container {
-                width: $_230;
+                width: $_200;
 
                 .data-item {
                     margin-left: $_0;
@@ -1639,16 +1998,17 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
-                        font-size: $_15;
+                        font-size: $_14;
                     }
 
                     .username {
-                        width: $_200;
-                        font-size: $_15;
+                        width: $_180;
+                        font-size: $_14;
                     }
 
                     .bio {
-                        width: $_200;
+                        width: $_180;
+                        overflow-x: hidden;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
@@ -1658,27 +2018,32 @@ a:hover,
                         font-size: 13px;
                     }
 
-                    .email,
+                    .email {
+                        width: $_180;
+                        font-size: $_14;
+                    }
+
                     .phonenumber {
-                        width: $_200;
-                        font-size: $_15;
+                        width: $_180;
+                        font-size: $_14;
                     }
                 }
 
 
                 .data-item:nth-child(9) {
-                    display: block;
-                    width: $_200;
-                    text-align: center;
-                    margin: $_0 $auto;
+                    .btn {
+                        width: $_200;
 
-                    a {
-                        display: block;
-                        margin: $_10 $auto;
-                        width: $_180;
-                        font-size: $_12;
+                        a {
+                            width: $_180;
+                            font-size: 13px;
+                        }
+
+                        .form .delete-account-profile {
+                            font-size: 11px;
+                            width: 193.2px;
+                        }
                     }
-
                 }
             }
         }
@@ -1706,18 +2071,19 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        word-wrap: break-word;
+                        font-size: 14px;
                     }
 
                     .username-input {
                         width: 220px;
-                        font-size: 14px;
+                        font-size: 13px;
                     }
 
                     .biotext-input {
                         width: 220px;
-                        font-size: 14px;
-                        overflow-y: auto;
+                        font-size: 13px;
+                        overflow-y: $auto;
                         white-space: wrap;
                         height: $_100;
                         resize: none;
@@ -1729,7 +2095,7 @@ a:hover,
                     .phonenumber-input,
                     .password-input {
                         width: 220px;
-                        font-size: 14px;
+                        font-size: 13px;
                     }
 
                     .username-input::placeholder,
@@ -1745,22 +2111,25 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 220px;
 
                     .btn {
-                        width: $_200;
 
-                        .back-to-profile-view-mode,
-                        .update-route {
-                            margin: $_10 $auto;
+                        .back-to-profile-view-mode {
+                            width: 217px;
+                            margin: $_15 $auto $_5;
                             font-size: 14px;
                             margin-bottom: $_0;
+                        }
+
+                        .update-route {
+                            width: 220.2px;
+                            margin: $_15 $auto $_5;
+                            font-size: 12px;
+                            margin-bottom: $_0;
+                            padding: $_2 $_0;
                         }
                     }
                 }
@@ -1921,11 +2290,6 @@ a:hover,
 
                 .form-field-row {
 
-                    .email,
-                    .password {
-                        width: $_200;
-                    }
-
                     .email-input,
                     .password-input {
                         font-size: 12px;
@@ -1952,6 +2316,97 @@ a:hover,
             }
         }
     }
+
+    .account-recovery {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+
+                    .username,
+                    .email {
+                        font-size: 14px;
+                        width: $_200;
+                    }
+
+                    .username-input,
+                    .email-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .back-to-login {
+                        width: 212px;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
+                }
+            }
+        }
+    }
+
 
     .register {
         width: $_350;
@@ -2271,12 +2726,12 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
-                        font-size: $_15;
+                        font-size: $_14;
                     }
 
                     .username {
                         width: $_230;
-                        font-size: $_15;
+                        font-size: $_14;
                     }
 
                     .bio {
@@ -2293,22 +2748,24 @@ a:hover,
                     .email,
                     .phonenumber {
                         width: $_230;
-                        font-size: $_15;
+                        font-size: $_14;
                     }
                 }
 
 
                 .data-item:nth-child(9) {
-                    width: $_250;
-                    justify-content: center;
-                    display: block;
-                    text-align: center;
-
-                    a {
-                        display: block;
-                        margin: $_10 $auto;
+                    .btn {
                         width: $_200;
-                        font-size: $_12;
+
+                        a {
+                            width: $_180;
+                            font-size: 13px;
+                        }
+
+                        .form .delete-account-profile {
+                            font-size: 11px;
+                            width: 193.2px;
+                        }
                     }
                 }
             }
@@ -2337,30 +2794,29 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .username-input {
                         width: 250px;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .biotext-input {
                         width: 250px;
-                        font-size: 16px;
+                        font-size: 13px;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
                         resize: none;
                         background-color: $dark_blue;
-                        color: $white;
                     }
 
                     .email-input,
                     .phonenumber-input,
                     .password-input {
                         width: 250px;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .username-input::placeholder,
@@ -2368,7 +2824,7 @@ a:hover,
                     .email-input::placeholder,
                     .phonenumber-input::placeholder,
                     .password-input::placeholder {
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                 }
 
@@ -2376,22 +2832,24 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 250px;
 
                     .btn {
-                        width: $_230;
-
-                        .back-to-profile-view-mode,
-                        .update-route {
+                        .back-to-profile-view-mode {
+                            width: 227px;
                             margin: $_10 $auto;
-                            font-size: $_15;
+                            font-size: 14px;
                             margin-bottom: $_0;
+                        }
+
+                        .update-route {
+                            width: 230.2px;
+                            margin: $_10 $auto;
+                            font-size: 12px;
+                            margin-bottom: $_0;
+                            padding: $_2 $_0;
                         }
                     }
                 }
@@ -2563,11 +3021,6 @@ a:hover,
                 .form-field-row {
                     width: $_250;
 
-                    .email,
-                    .password {
-                        width: $_200;
-                    }
-
                     .email-input,
                     .password-input {
                         font-size: 12px;
@@ -2583,13 +3036,103 @@ a:hover,
                 }
 
                 .form-field-row:nth-child(6) {
-                    width: 242px;
-
                     .paragraph {
                         font-size: 12px;
                     }
 
+                    width: 242px;
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .account-recovery {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .email {
+                        font-size: 14px;
+                        width: $_200;
+                    }
+
+                    .username-input,
+                    .email-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .back-to-login {
+                        width: 212px;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
                 }
             }
         }
@@ -2882,10 +3425,12 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
+                        font-size: $_14;
                     }
 
                     .username {
                         width: $_230;
+                        font-size: $_14;
                     }
 
                     .bio {
@@ -2896,26 +3441,30 @@ a:hover,
                         resize: none;
                         background-color: $dark_blue;
                         color: $white;
+                        font-size: 13px;
                     }
 
                     .email,
                     .phonenumber {
                         width: $_230;
+                        font-size: $_14;
                     }
                 }
 
 
                 .data-item:nth-child(9) {
-                    width: $_250;
-                    justify-content: center;
-                    display: block;
-                    text-align: center;
-
-                    a {
-                        display: block;
-                        margin: $_10 $auto;
+                    .btn {
                         width: $_200;
-                        font-size: $_12;
+
+                        a {
+                            width: $_180;
+                            font-size: 13px;
+                        }
+
+                        .form .delete-account-profile {
+                            font-size: 11px;
+                            width: 193.2px;
+                        }
                     }
                 }
             }
@@ -2944,17 +3493,17 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .username-input {
                         width: 280px;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .biotext-input {
                         width: 280px;
-                        font-size: 16px;
+                        font-size: $_14;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
@@ -2967,7 +3516,7 @@ a:hover,
                     .phonenumber-input,
                     .password-input {
                         width: 280px;
-                        font-size: 16px;
+                        font-size: $_14;
                     }
 
                     .username-input::placeholder,
@@ -2975,7 +3524,7 @@ a:hover,
                     .email-input::placeholder,
                     .phonenumber-input::placeholder,
                     .password-input::placeholder {
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                 }
 
@@ -2983,22 +3532,24 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 280px;
 
                     .btn {
-                        width: $_250;
-
-                        .back-to-profile-view-mode,
-                        .update-route {
+                        .back-to-profile-view-mode {
+                            width: 227px;
                             margin: $_10 $auto;
-                            font-size: $_15;
+                            font-size: 14px;
                             margin-bottom: $_0;
+                        }
+
+                        .update-route {
+                            width: 230.2px;
+                            margin: $_10 $auto;
+                            font-size: 12px;
+                            margin-bottom: $_0;
+                            padding: $_2 $_0;
                         }
                     }
                 }
@@ -3195,6 +3746,97 @@ a:hover,
                     }
 
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .account-recovery {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .email {
+                        font-size: 14px;
+                        width: $_200;
+                    }
+
+                    .username-input,
+                    .email-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .back-to-login {
+                        width: 212px;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
                 }
             }
         }
@@ -3490,10 +4132,12 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
+                        font-size: $_14;
                     }
 
                     .username {
                         width: $_300;
+                        font-size: $_14;
                     }
 
                     .bio {
@@ -3504,11 +4148,13 @@ a:hover,
                         resize: none;
                         background-color: $dark_blue;
                         color: $white;
+                        font-size: 13px;
                     }
 
                     .email,
                     .phonenumber {
                         width: $_300;
+                        font-size: $_14;
                     }
                 }
 
@@ -3533,13 +4179,20 @@ a:hover,
                 }
 
                 .data-item:nth-child(9) {
-                    width: 410px;
                     margin: $_0 $auto;
-                    justify-content: center;
 
-                    a {
-                        display: block;
-                        font-size: 14px;
+                    .btn {
+                        width: 410px;
+
+                        a {
+                            width: $_300;
+                            font-size: 13px;
+                        }
+
+                        .form .delete-account-profile {
+                            font-size: 11px;
+                            width: 313.2px;
+                        }
                     }
                 }
             }
@@ -3568,17 +4221,17 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .username-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 12px;
                     }
 
                     .biotext-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
@@ -3591,7 +4244,7 @@ a:hover,
                     .phonenumber-input,
                     .password-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .username-input::placeholder,
@@ -3599,7 +4252,7 @@ a:hover,
                     .email-input::placeholder,
                     .phonenumber-input::placeholder,
                     .password-input::placeholder {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
 
@@ -3607,21 +4260,22 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 350px;
 
                     .btn {
-                        width: $_150;
+                        .back-to-profile-view-mode {
+                            font-size: 14px;
+                            width: 150px;
+                            margin: $_15 $auto $_5;
+                        }
 
-                        .back-to-profile-view-mode,
                         .update-route {
-                            font-size: $_15;
-                            margin-bottom: $_0;
+                            font-size: 12px;
+                            width: 153.2px;
+                            margin: $_15 $auto $_5;
+                            padding: $_2 $_0;
                         }
                     }
                 }
@@ -3819,6 +4473,97 @@ a:hover,
                     }
 
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .account-recovery {
+        width: $_350;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .email {
+                        font-size: 14px;
+                        width: $_200;
+                    }
+
+                    .username-input,
+                    .email-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(5) {
+                    .back-to-login {
+                        width: 212px;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
                 }
             }
         }
@@ -4112,10 +4857,12 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
+                        font-size: $_14;
                     }
 
                     .username {
                         width: $_300;
+                        font-size: $_14;
                     }
 
                     .bio {
@@ -4126,11 +4873,13 @@ a:hover,
                         resize: none;
                         background-color: $dark_blue;
                         color: $white;
+                        font-size: 13px;
                     }
 
                     .email,
                     .phonenumber {
                         width: $_300;
+                        font-size: $_14;
                     }
                 }
 
@@ -4157,11 +4906,19 @@ a:hover,
                 .data-item:nth-child(9) {
                     width: 410px;
                     margin: $_0 $auto;
-                    justify-content: center;
 
-                    a {
-                        display: block;
-                        font-size: 14px;
+                    .btn {
+                        width: 410px;
+
+                        a {
+                            width: $_300;
+                            font-size: 13px;
+                        }
+
+                        .form .delete-account-profile {
+                            font-size: 11px;
+                            width: 313.2px;
+                        }
                     }
                 }
             }
@@ -4190,17 +4947,17 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .username-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .biotext-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 13px;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
@@ -4213,15 +4970,22 @@ a:hover,
                     .phonenumber-input,
                     .password-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
-                    .username-input::placeholder,
-                    .biotext-input::placeholder,
+                    .username-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .biotext-input::placeholder {
+                        font-size: 12px;
+
+                    }
+
                     .email-input::placeholder,
                     .phonenumber-input::placeholder,
                     .password-input::placeholder {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
 
@@ -4229,21 +4993,22 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 350px;
 
                     .btn {
-                        width: $_150;
+                        .back-to-profile-view-mode {
+                            font-size: 14px;
+                            width: 150px;
+                            margin: $_15 $auto $_5;
+                        }
 
-                        .back-to-profile-view-mode,
                         .update-route {
-                            font-size: $_15;
-                            margin-bottom: $_0;
+                            font-size: 12px;
+                            width: 153.2px;
+                            margin: $_15 $auto $_5;
+                            padding: $_2 $_0;
                         }
                     }
                 }
@@ -4441,6 +5206,102 @@ a:hover,
                     }
 
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .account-recovery {
+        width: $_350;
+
+        .wrapper {
+            width: $_300;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    font-size: 12px;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .username,
+                    .email {
+                        width: $_200;
+                        font-size: 14px;
+                    }
+
+                    .username-input,
+                    .email-input {
+                        font-size: 12px;
+                        width: $_200;
+                    }
+                }
+
+                .form-field-row:nth-child(4) {
+                    width: 212px;
+                    font-size: 14px;
+                }
+
+                .form-field-row:nth-child(5) {
+                    .back-to-login {
+                        width: 212px;
+                        font-size: 13px;
+                    }
+                }
+
+                .form-field-row:nth-child(6) {
+                    .submit-btn {
+                        width: 212px;
+                        font-size: 11.5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .password-reset {
+        width: $_280;
+
+        .wrapper {
+            width: $_250;
+
+            .heading.container {
+                width: $_250;
+
+                .paragraph {
+                    width: $_230;
+                }
+            }
+
+            #form {
+                width: $_250;
+
+                .form-field-row {
+                    width: $_250;
+
+                    .password {
+                        font-size: 14px;
+                    }
+
+                    .password-input {
+                        width: 238px;
+                    }
+
+                    .password-input::placeholder {
+                        font-size: 12px;
+                    }
+
+                    .submit-btn {
+                        font-size: 12px;
+                        width: $_250;
+                    }
                 }
             }
         }
@@ -4735,10 +5596,12 @@ a:hover,
                     .email-label,
                     .phonenumber-label {
                         width: $_100;
+                        font-size: $_14;
                     }
 
                     .username {
                         width: $_300;
+                        font-size: $_14;
                     }
 
                     .bio {
@@ -4754,6 +5617,7 @@ a:hover,
                     .email,
                     .phonenumber {
                         width: $_300;
+                        font-size: $_14;
                     }
                 }
 
@@ -4782,9 +5646,23 @@ a:hover,
                     margin: $_0 $auto;
                     justify-content: center;
 
-                    a {
-                        display: block;
-                        font-size: 14px;
+                    .btn {
+                        min-width: $_100;
+                        max-width: $_230;
+                        margin: $_0 $_2;
+
+                        a {
+                            font-size: 13px;
+                            margin-left: $_2;
+                            margin-right: $_2;
+                        }
+
+                        .form .delete-account-profile {
+
+                            font-size: 11px;
+                            margin-left: $_2;
+                            margin-right: $_2;
+                        }
                     }
                 }
             }
@@ -4813,17 +5691,17 @@ a:hover,
                     .phonenumber-label,
                     .password-label {
                         width: $_100;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .username-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                     }
 
                     .biotext-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 14px;
                         overflow-y: auto;
                         white-space: wrap;
                         height: $_100;
@@ -4836,7 +5714,7 @@ a:hover,
                     .phonenumber-input,
                     .password-input {
                         width: 300px;
-                        font-size: 16px;
+                        font-size: 13px;
                     }
 
                     .username-input::placeholder,
@@ -4844,7 +5722,7 @@ a:hover,
                     .email-input::placeholder,
                     .phonenumber-input::placeholder,
                     .password-input::placeholder {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
 
@@ -4852,21 +5730,22 @@ a:hover,
                     margin: $_0 $_0 $_0;
                 }
 
-                .form-field-row:nth-child(10) {
-                    margin-bottom: $_10;
-                }
-
-                .form-field-row:nth-child(11) {
+                .form-field-row:nth-child(13) {
                     display: $flex;
                     width: 350px;
 
                     .btn {
-                        width: $_150;
+                        .back-to-profile-view-mode {
+                            font-size: 14px;
+                            width: 150px;
+                            margin: $_15 $auto $_5;
+                        }
 
-                        .back-to-profile-view-mode,
                         .update-route {
-                            font-size: $_15;
-                            margin-bottom: $_0;
+                            font-size: 12px;
+                            width: 153.2px;
+                            margin: $_15 $auto $_5;
+                            padding: $_2 $_0;
                         }
                     }
                 }

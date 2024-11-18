@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <UI.Section class_name={"notfound"}>
       <UI.Section class_name={"wrapper"}>
-        <UI.Heading_One class_name={"heading-one"} text={"Page Not Found"} />
+        <UI.HeadingOne class_name={"heading-one"} text={"Page Not Found"} />
         <UI.Route
           to={"/"}
           text={"Back to Home Page>>"}

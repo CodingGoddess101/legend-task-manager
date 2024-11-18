@@ -5,13 +5,16 @@ import "../css/App.css";
 const Home = () => {
   useEffect(() => {
     document.title = "Home page";
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
   }, []);
   return (
     <>
-      <UI.Header_Standard />
+      <UI.HeaderStandard />
       <UI.Section class_name={"home"}>
         <UI.Section class_name={"container"}>
-          <UI.Heading_One
+          <UI.HeadingOne
             class_name={"heading-one"}
             text={"MERN Stack based Legend Task Management System"}
           />

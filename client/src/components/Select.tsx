@@ -1,7 +1,12 @@
 import Props from "./ComponentProps";
-const Select = ({ class_name, name, onChange, children }: Props) => {
+const Select = ({ id, class_name, name, onChange, children }: Props) => {
   return (
-    <select className={`${class_name}`} name={`${name}`} onChange={onChange}>
+    <select
+      id={`${id}`}
+      className={`${class_name}`}
+      name={`${name}`}
+      onChange={onChange}
+    >
       {children}
     </select>
   );

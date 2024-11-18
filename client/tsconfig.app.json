@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "../server/index.js"]
+  "include": ["src", "../server/index.js", "../server/views/notifications"]
 }
